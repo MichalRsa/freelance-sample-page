@@ -1,0 +1,79 @@
+---
+import { getTransLink, languages } from "../utils/langs";
+import { useStoryblokApi } from "@storyblok/astro";
+import isPreview from "../utils/isPreview";
+import Button from "./Button.astro";
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get("cdn/stories/config", {
+  version: isPreview() ? "draft" : "published",
+  resolve_links: "url",
+});
+const { opening_hours, socials, footer_menu, phone_number }: any =
+  data?.story?.content;
+
+// console.log(
+//   opening_hours,
+//   socials,
+//   footer_menu,
+// );
+
+const { language, langSwitch } = Astro.props;
+---
+
+<footer
+  class="flex w-full justify-between bg-primary-700 px-20 py-4 text-primary-50"
+>
+  <div>
+    <h3>Kawusia</h3>
+    <div class="flex justify-between">
+      {
+        socials.map((social: any) => (
+          <a href="/">
+            <img src={social.filename} alt="" />
+          </a>
+        ))
+      }
+    </div>
+    <a
+      href={`tel:${phone_number}`}
+      class="text-md block pt-4 text-center underline">{phone_number}</a
+    >
+  </div>
+  <div>
+    <p class="pb-4 font-bold">Godziny otwarcia</p>
+    {
+      (
+        <ul class="w-64">
+          {opening_hours.map((day: any) => (
+            <li>
+              <p class="flex justify-between pb-1">
+                <span>{day.day}</span>
+                <span>{day.hours}</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+
+  <div>
+    <ul class="flex flex-col items-center space-x-8 text-base font-bold">
+      {
+        footer_menu.map((menu) => (
+          <li>
+            <a
+              href={getTransLink(language, `/${menu.link.cached_url}`)}
+              class="text-secondary-100"
+            >
+              {menu.link.story.name}
+            </a>
+          </li>
+        ))
+      }
+      <Button text="Menu" />
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import '../styles/global.css'
+const { language, langSwitch } = Astro.props
+---
+ 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>The Storyblok Astro Ultimate Tutorial: Part 2</title>
+  </head>
+  <body class="mx-auto">
+    <Header langSwitch={langSwitch} language={language} />
+    <slot />
+    <Footer />
+  </body>
+</html>

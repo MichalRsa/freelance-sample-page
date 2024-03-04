@@ -1,0 +1,38 @@
+---
+import { renderRichText, storyblokEditable } from "@storyblok/astro";
+import SectionWrapper, {
+  type Props as SectionWrapperProps,
+} from "../components/SectionWrapper.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Button from "../components/Button.astro";
+
+interface Props {
+  blok: {
+    title: string;
+    address: string;
+    description: any;
+    cta: string;
+    background_color: SectionWrapperProps["bgColor"];
+  };
+}
+
+const { blok } = Astro.props;
+
+const renderedRichText = renderRichText(blok.description);
+---
+
+<div {...storyblokEditable(blok)}>
+  <SectionWrapper bgColor={blok.background_color}>
+    <SectionTitle title={blok.title} />
+    <div
+      class="m-auto flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500"
+    >
+      <div class="max-w-96 p-12">
+        <p class="mb-8 font-bold">{blok.address}</p>
+        <div set:html={renderedRichText} class="mb-10" />
+        <Button text={blok.cta} classes="bg-ternary-500" />
+      </div>
+      <div class="w-full self-stretch bg-text-300"></div>
+    </div>
+  </SectionWrapper>
+</div>

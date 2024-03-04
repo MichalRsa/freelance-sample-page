@@ -1,0 +1,50 @@
+@tailwind base;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+  
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-lora font-medium;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply text-4xl;
+  }
+
+  h4 {
+    @apply text-4xl;
+  }
+
+  h5 {
+    @apply text-4xl;
+  }
+
+  h6 {
+    @apply text-4xl;
+  }
+
+  body {
+    @apply font-rubik font-light;
+  }
+
+  p {
+    @apply max-md:text-sm;
+  }
+}

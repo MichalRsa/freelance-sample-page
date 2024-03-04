@@ -1,0 +1,31 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import SectionWrapper, {
+  type Props as SectionWrapperProps,
+} from "../components/SectionWrapper.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+
+interface Props {
+  blok: {
+    title: string;
+    reviews: any[];
+    background_color: SectionWrapperProps["bgColor"];
+  };
+}
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <SectionWrapper bgColor={blok.background_color}>
+    <SectionTitle title={blok.title} />
+    <div class="flex items-stretch justify-between gap-11 py-12">
+      {
+        blok.reviews?.map((blok: any) => {
+          return <StoryblokComponent blok={blok} />;
+        })
+      }
+    </div>
+  </SectionWrapper>
+</div>

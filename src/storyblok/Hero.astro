@@ -1,0 +1,32 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+
+const { blok } = Astro.props;
+let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
+---
+
+<div
+  {...storyblokEditable(blok)}
+  class={`${dynamicHeroClass} h-screen relative flex overflow-hidden p-20 pt-44`}
+>
+  <div
+    class="from-black/70 via-black/50 to-transparent z-10 w-4/6 bg-gradient-to-t py-6"
+  >
+    <h1 class="mb-3 text-5xl text-secondary-100">
+      {blok.headline}
+    </h1>
+    <h2 class="mb-3 text-2xl font-light text-secondary-100">
+      {blok.subheadline}
+    </h2>
+    <Button text="Menu" />
+  </div>
+  <Image
+    src={blok.background_image.filename}
+    alt={blok.background_image.alt}
+    class="absolute left-0 top-0 z-0 h-full w-full object-cover"
+    width={1}
+    height={1}
+  />
+</div>

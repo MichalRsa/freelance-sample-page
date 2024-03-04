@@ -1,0 +1,64 @@
+---
+import { getTransLink, languages } from "../utils/langs";
+import { useStoryblokApi } from "@storyblok/astro";
+import isPreview from "../utils/isPreview";
+import Button from "./Button.astro";
+
+interface IHeaderMenu {
+  link: {
+    cached_url: string;
+    story: {
+      name: string;
+    };
+  };
+}
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get("cdn/stories/config", {
+  version: isPreview() ? "draft" : "published",
+  resolve_links: "url",
+});
+const headerMenu: IHeaderMenu[] = data?.story?.content?.header_menu;
+
+
+const { language, langSwitch } = Astro.props;
+
+// console.log(headerMenu[0].link)
+console.log(data?.story?.content?.header_menu[0].link)
+---
+
+<header class="absolute z-50 w-full bg-primary-700 px-20 py-4">
+  <div class="container mx-auto flex h-full items-center justify-between">
+    <a href={getTransLink(language, "/")}>
+      <h1 class="text-2xl text-secondary-100">Kawusia | Coffe Bar</h1>
+    </a>
+    <nav>
+      <ul class="flex items-center space-x-8 text-base font-bold">
+        {
+          headerMenu.map((menu) => (
+            <li>
+              <a
+                href={getTransLink(language, `/${menu.link.cached_url}`)}
+                class="text-secondary-100"
+              >
+                {menu.link.story.name}
+              </a>
+            </li>
+          ))
+        }
+        {
+          languages.map((lang) => (
+            <a
+              class={`px-2 text-secondary-100 hover:bg-primary-200 ${lang === language ? "bg-primary-300" : ""}`}
+              href={langSwitch[lang]}
+            >
+              {lang}
+            </a>
+          ))
+        }
+        <Button text="Menu" />
+      </ul>
+    </nav>
+  </div>
+</header>

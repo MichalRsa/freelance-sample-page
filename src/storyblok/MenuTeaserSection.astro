@@ -1,0 +1,33 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import SectionWrapper, {
+  type Props as SectionWrapperProps,
+} from "../components/SectionWrapper.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Button from "../components/Button.astro";
+
+interface Props {
+  blok: {
+    title: string;
+    background_color: SectionWrapperProps["bgColor"];
+    teaser_card: any[];
+  };
+}
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <SectionWrapper bgColor={blok.background_color}>
+    <SectionTitle title={blok.title} />
+    <div class="flex items-stretch justify-between gap-11 py-12">
+      {
+        blok.teaser_card?.map((blok: any) => {
+          return <StoryblokComponent blok={blok} />;
+        })
+      }
+    </div>
+    <Button text='See Full Menu' />
+  </SectionWrapper>
+</div>

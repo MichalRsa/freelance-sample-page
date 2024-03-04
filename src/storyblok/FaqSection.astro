@@ -1,0 +1,21 @@
+---
+import SectionTitle from "../components/SectionTitle.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
+import FaqCard from "./FaqCard.astro";
+
+const { blok } = Astro.props;
+---
+
+<SectionWrapper bgColor="primary">
+  <SectionTitle title="Frequently Asked Questions" />
+
+  <div>
+    {
+      blok.faq_cards.map((blok: any) => (
+        <div class="box-border max-lg:my-8">
+          <FaqCard blok={blok} />
+        </div>
+      ))
+    }
+  </div>
+</SectionWrapper>

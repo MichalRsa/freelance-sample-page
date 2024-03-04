@@ -1,0 +1,31 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import { Image } from "astro:assets";
+import Bulletpoint from "/public/Vector.svg";
+
+interface Props {
+  blok: {
+    title: string;
+    image: any;
+  };
+}
+
+const { blok } = Astro.props;
+---
+
+<article
+  {...storyblokEditable(blok)}
+  class="first:-translate-y-12 last:translate-y-12"
+>
+  <div class="shadow-main shadow-text-500">
+    <Image src={blok.image.filename} alt="" height={370} width={370} />
+  </div>
+  <div class="flex items-center pt-4">
+    <div class="pr-4">
+      <Image src={Bulletpoint} alt="" />
+    </div>
+    <p class="font-lora text-2xl">
+      {blok.title}
+    </p>
+  </div>
+</article>

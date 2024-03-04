@@ -1,0 +1,64 @@
+---
+interface Props {
+  blok: {
+    question: string;
+    answer: string;
+  };
+}
+
+const { blok } = Astro.props;
+---
+
+<faq-card>
+  <div
+    class="animationHidden animationLeft mb-8 bg-secondary-500 p-4 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200"
+  >
+    <button
+      data-faq-button
+      class="flex w-full items-center justify-between text-xl focus:outline-none md:text-xl font-lora"
+    >
+      <span class="text-left">{blok.question}</span>
+      <div class="h-6 min-w-[24px] flex-grow-0 transition-all">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width={2}
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+    </button>
+    <div data-faq-accordion class="grid transition-all">
+      <div class="overflow-hidden ">
+        <p class="pt-4">{blok.answer}</p>
+      </div>
+    </div>
+  </div>
+</faq-card>
+
+<script>
+  class Accordion extends HTMLElement {
+    constructor() {
+      super();
+
+      let isOpen = false;
+
+      const button = this.querySelector<HTMLElement>("[data-faq-button]");
+      const accordion = this.querySelector<HTMLElement>("[data-faq-accordion]");
+
+      if (accordion == null) return;
+
+      accordion.style.gridTemplateRows = "0fr";
+
+      const toggleAccordion = () => {
+        isOpen = !isOpen;
+
+        accordion.style.gridTemplateRows = isOpen ? "1fr" : "0fr";
+      };
+
+      button?.addEventListener("click", toggleAccordion);
+    }
+  }
+
+  customElements.define("faq-card", Accordion);
+</script>
