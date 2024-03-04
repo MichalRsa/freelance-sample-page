@@ -1,0 +1,33 @@
+---
+import { twMerge } from "tailwind-merge";
+import { getTransLink } from "../utils/langs";
+
+export interface Props {
+  blok: {
+    link: {
+      cached_url: string;
+      story: {
+        name: string;
+      };
+    };
+    style: "link" | "primary" | "secondary";
+    language: string;
+  };
+}
+
+const { blok } = Astro.props;
+
+const styles = {
+  link: "",
+  primary:
+    "text-text-500 bg-secondary-500 px-11 py-3 shadow-main shadow-text-500",
+  secondary: "",
+};
+---
+
+<a
+  href={getTransLink(blok.language, `/${blok.link.cached_url}`)}
+  class={twMerge("text-secondary-100", styles[blok.style])}
+>
+  {blok.link.story.name}
+</a>

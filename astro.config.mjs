@@ -33,7 +33,8 @@ export default defineConfig({
         menu_teaser_card: "storyblok/MenuTeaserCard",
         map_section: "storyblok/MapSection",
         faq_section: "storyblok/FaqSection",
-        faq_card: "storyblok/FaqCard"
+        faq_card: "storyblok/FaqCard",
+        link:"storyblok/Link"
       },
     }),
     tailwind(),

@@ -1,10 +1,23 @@
 ---
-import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro'
-import '../styles/global.css'
-const { language, langSwitch } = Astro.props
+import { useStoryblokApi } from "@storyblok/astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+import isPreview from "../utils/isPreview";
+
+const { language, langSwitch } = Astro.props;
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get("cdn/stories/config", {
+  version: isPreview() ? "draft" : "published",
+  resolve_links: "url",
+});
+
+const header = data.story.content.header[0];
+const footer = data.story.content.footer[0];
 ---
- 
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,8 +26,8 @@ const { language, langSwitch } = Astro.props
     <title>The Storyblok Astro Ultimate Tutorial: Part 2</title>
   </head>
   <body class="mx-auto">
-    <Header langSwitch={langSwitch} language={language} />
+    <Header blok={header} langSwitch={langSwitch} language={language} />
     <slot />
-    <Footer />
+    <Footer blok={footer} langSwitch={langSwitch} language={language} />
   </body>
 </html>

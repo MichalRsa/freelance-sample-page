@@ -1,31 +1,11 @@
 ---
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import { getTransLink, languages } from "../utils/langs";
-import { useStoryblokApi } from "@storyblok/astro";
-import isPreview from "../utils/isPreview";
-import Button from "./Button.astro";
+import type { Props as LinkProps } from "../storyblok/Link.astro";
 
-interface IHeaderMenu {
-  link: {
-    cached_url: string;
-    story: {
-      name: string;
-    };
-  };
-}
+const { blok, language, langSwitch } = Astro.props;
 
-const storyblokApi = useStoryblokApi();
-
-const { data } = await storyblokApi.get("cdn/stories/config", {
-  version: isPreview() ? "draft" : "published",
-  resolve_links: "url",
-});
-const headerMenu: IHeaderMenu[] = data?.story?.content?.header_menu;
-
-
-const { language, langSwitch } = Astro.props;
-
-// console.log(headerMenu[0].link)
-console.log(data?.story?.content?.header_menu[0].link)
+const menu = blok.menu;
 ---
 
 <header class="absolute z-50 w-full bg-primary-700 px-20 py-4">
@@ -36,14 +16,9 @@ console.log(data?.story?.content?.header_menu[0].link)
     <nav>
       <ul class="flex items-center space-x-8 text-base font-bold">
         {
-          headerMenu.map((menu) => (
+          menu.map((menuItem: LinkProps) => (
             <li>
-              <a
-                href={getTransLink(language, `/${menu.link.cached_url}`)}
-                class="text-secondary-100"
-              >
-                {menu.link.story.name}
-              </a>
+              <StoryblokComponent blok={{ ...menuItem, language }} />
             </li>
           ))
         }
@@ -57,7 +32,6 @@ console.log(data?.story?.content?.header_menu[0].link)
             </a>
           ))
         }
-        <Button text="Menu" />
       </ul>
     </nav>
   </div>
