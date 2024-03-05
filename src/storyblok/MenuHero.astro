@@ -1,0 +1,33 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import Link from "./Link.astro";
+
+const { blok, language } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)} class="bg-secondary-500 p-20">
+  <div
+    class="from-black/70 via-black/50 to-transparent z-10 bg-gradient-to-t py-6"
+  >
+    <h1 class="mb-10 text-center text-5xl text-text-500 font-bold">
+      {blok.title}
+    </h1>
+    <div class="mx-auto max-w-96">
+      <div class="flex justify-around">
+        {
+          blok.links.map((blok: any) => (
+            <Link
+              blok={{
+                ...blok,
+                fontSize: "text-2xl",
+                color: "black",
+                font: "lora",
+                language,
+              }}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

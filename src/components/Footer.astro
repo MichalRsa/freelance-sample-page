@@ -1,6 +1,6 @@
 ---
-import { getTransLink } from "../utils/langs";
 import type { Props as LinkProps } from "../storyblok/Link.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const { blok, language } = Astro.props;
 
@@ -45,16 +45,11 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
   </div>
 
   <div>
-    <ul class="flex flex-col items-center text-base font-bold">
+    <ul class="flex h-full flex-col justify-start text-base font-bold">
       {
-        footer_menu.map((menu: LinkProps) => (
-          <li>
-            <a
-              href={getTransLink(language, `/${menu.link.cached_url}`)}
-              class="text-secondary-100"
-            >
-              {menu.link.story?.name}
-            </a>
+        footer_menu.map((menuItem: LinkProps) => (
+          <li class="mb-10">
+            <StoryblokComponent blok={{ ...menuItem, language }} />
           </li>
         ))
       }

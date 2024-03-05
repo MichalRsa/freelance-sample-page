@@ -1,33 +1,59 @@
 ---
-import { twMerge } from "tailwind-merge";
 import { getTransLink } from "../utils/langs";
 
 export interface Props {
   blok: {
     link: {
+      anchor?: string;
       cached_url: string;
-      story: {
+      story?: {
         name: string;
       };
     };
     style: "link" | "primary" | "secondary";
     language: string;
+    fontSize?: string;
+    color?: "white" | "black";
+    font?: "lora" | "rubik";
   };
 }
 
 const { blok } = Astro.props;
 
+const name = blok.link.story?.name || blok.link.anchor;
+
+const url = !!blok.link.anchor
+  ? `${blok.link.cached_url}#${blok.link.anchor}`
+  : getTransLink(blok.language, `/${blok.link.cached_url}`);
+
 const styles = {
-  link: "",
-  primary:
-    "text-text-500 bg-secondary-500 px-11 py-3 shadow-main shadow-text-500",
-  secondary: "",
+  color: {
+    white: "text-secondary-100",
+    black: "text-text-500",
+  },
+  font: {
+    lora: "font-lora",
+    rubik: "font-rubik",
+  },
+  type: {
+    link: "",
+    primary:
+      "text-text-500 bg-secondary-500 px-11 py-3 shadow-main shadow-text-500",
+    secondary: "",
+  },
 };
 ---
 
 <a
-  href={getTransLink(blok.language, `/${blok.link.cached_url}`)}
-  class={twMerge("text-secondary-100", styles[blok.style])}
+  href={url}
+  class:list={[
+    "capitalize text-secondary-100",
+    styles.type[blok.style],
+
+    styles.color[blok.color || "white"],
+    styles.font[blok.font || "rubik"],
+    blok.fontSize,
+  ]}
 >
-  {blok.link.story.name}
+  {name}
 </a>

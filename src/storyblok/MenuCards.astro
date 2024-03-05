@@ -1,0 +1,21 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import SectionWrapper, {
+  type Props as SectionWrapperProps,
+} from "../components/SectionWrapper.astro";
+import MenuCard from "./MenuCard.astro";
+
+interface Props {
+  blok: {};
+}
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <SectionWrapper bgColor="secondary">
+    <div class="flex flex-wrap justify-around">
+      {blok.menu.map((menuItem) => <MenuCard blok={menuItem} />)}
+    </div>
+  </SectionWrapper>
+</div>
