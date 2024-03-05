@@ -9,6 +9,7 @@ export default {
     fontSize: {
       xs: ["0.5rem", "120%"],
       sm: ["0.65rem", "120%"],
+      md: ["0.8rem", "120%"],
       base: ["1rem", "120%"],
       lg: ["1.25rem", "120%"],
       xl: ["1.55rem", "120%"],

@@ -1,7 +1,8 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import Button from "../components/Button.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
+import SectionWrapper from "../components/SectionWrapper.astro";
 
 const { blok } = Astro.props;
 let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
@@ -9,24 +10,26 @@ let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
 
 <div
   {...storyblokEditable(blok)}
-  class={`${dynamicHeroClass} h-screen relative flex overflow-hidden p-20 pt-44`}
+  class={`${dynamicHeroClass} md:h-screen relative flex overflow-hidden pt-44`}
 >
-  <div
-    class="from-black/70 via-black/50 to-transparent z-10 w-4/6 bg-gradient-to-t py-6"
-  >
-    <h1 class="mb-3 text-5xl text-secondary-100">
-      {blok.headline}
-    </h1>
-    <h2 class="mb-3 text-2xl font-light text-secondary-100">
-      {blok.subheadline}
-    </h2>
-    <Button text="Menu" />
-  </div>
   <Image
     src={blok.background_image.filename}
     alt={blok.background_image.alt}
-    class="absolute left-0 top-0 z-0 h-full w-full object-cover"
+    class="absolute left-0 top-0 -z-50 h-full w-full object-cover"
     width={1}
     height={1}
   />
+  <SectionWrapper bgColor="transparent">
+    <div
+      class="from-black/70 via-black/50 to-transparent w-4/6 bg-gradient-to-t py-6"
+    >
+      <h1 class="mb-3 text-secondary-100">
+        {blok.headline}
+      </h1>
+      <p class="mb-3 text-base md:text-2xl font-lora font-light text-secondary-100">
+        {blok.subheadline}
+      </p>
+      <Button text="Menu" />
+    </div>
+  </SectionWrapper>
 </div>

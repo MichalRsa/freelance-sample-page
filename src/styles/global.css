@@ -3,7 +3,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 20px;
-  
 }
 
 @layer base {
@@ -17,27 +16,27 @@ html {
   }
 
   h1 {
-    @apply text-5xl;
+    @apply text-3xl md:text-5xl;
   }
 
   h2 {
-    @apply text-5xl;
+    @apply text-3xl md:text-5xl;
   }
 
   h3 {
-    @apply text-4xl;
+    @apply text-xl md:text-4xl;
   }
 
   h4 {
-    @apply text-4xl;
+    @apply text-xl md:text-4xl;
   }
 
   h5 {
-    @apply text-4xl;
+    @apply text-xl md:text-4xl;
   }
 
   h6 {
-    @apply text-4xl;
+    @apply text-xl md:text-4xl;
   }
 
   body {
@@ -45,6 +44,6 @@ html {
   }
 
   p {
-    @apply max-md:text-sm;
+    @apply max-md:text-md;
   }
 }

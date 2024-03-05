@@ -1,19 +1,18 @@
 ---
-import clsx from "clsx";
-
 export interface Props {
-  bgColor: "primary" | "secondary";
+  bgColor: "primary" | "secondary" | "transparent";
 }
 
 const { bgColor } = Astro.props;
 
 const bgColorClass = {
+  transparent: "bg-transparent",
   primary: "bg-primary-100",
   secondary: "bg-ternary-300",
 };
 ---
 
-<section class={clsx(bgColorClass[bgColor], "md:p-12 py-8 px-2")}>
+<section class:list={[bgColorClass[bgColor], "px-2 py-8 md:p-12"]}>
   <div class="mx-auto max-w-7xl">
     <slot />
   </div>
