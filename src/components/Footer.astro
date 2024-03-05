@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import type { Props as LinkProps } from "../storyblok/Link.astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
@@ -8,29 +9,29 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
 ---
 
 <footer
-  class="flex w-full justify-between bg-primary-700 px-20 py-4 text-primary-50"
+  class="flex w-full justify-between bg-primary-700 px-2 py-4 text-primary-50 md:px-20"
 >
   <div>
     <h3>Kawusia</h3>
-    <div class="flex justify-between">
+    <div class="flex justify-between flex-shrink">
       {
         socials.map((social: any) => (
           <a href="/">
-            <img src={social.filename} alt="" />
+            <Image src={social.filename} alt="" width={96} height={96} />
           </a>
         ))
       }
     </div>
     <a
       href={`tel:${phone_number}`}
-      class="text-md block pt-4 text-center underline">{phone_number}</a
+      class="block pt-4 text-center text-md underline">{phone_number}</a
     >
   </div>
   <div>
     <p class="pb-4 font-bold">Opening Hours</p>
     {
       (
-        <ul class="w-64">
+        <ul class="md:w-64">
           {opening_hours.map((day: any) => (
             <li>
               <p class="flex justify-between pb-1">

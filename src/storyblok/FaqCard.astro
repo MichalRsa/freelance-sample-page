@@ -11,11 +11,11 @@ const { blok } = Astro.props;
 
 <faq-card>
   <div
-    class="animationHidden animationLeft mb-8 bg-secondary-500 p-4 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200"
+    class="animationHidden animationLeft mb-8 bg-secondary-500 p-2 md:p-4 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200"
   >
     <button
       data-faq-button
-      class="flex w-full items-center justify-between text-xl focus:outline-none md:text-xl font-lora"
+      class="flex w-full items-center justify-between focus:outline-none md:text-xl font-lora"
     >
       <span class="text-left">{blok.question}</span>
       <div class="h-6 min-w-[24px] flex-grow-0 transition-all">

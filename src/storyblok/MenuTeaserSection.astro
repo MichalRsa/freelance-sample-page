@@ -21,13 +21,15 @@ const { blok } = Astro.props;
 <div {...storyblokEditable(blok)}>
   <SectionWrapper bgColor={blok.background_color}>
     <SectionTitle title={blok.title} />
-    <div class="flex items-stretch justify-between gap-11 py-12">
+    <div
+      class="flex flex-col items-center justify-between gap-4 sm:py-12 sm:flex-row sm:items-stretch sm:gap-11"
+    >
       {
         blok.teaser_card?.map((blok: any) => {
           return <StoryblokComponent blok={blok} />;
         })
       }
     </div>
-    <Button text='See Full Menu' />
+    <Button text="See Full Menu" />
   </SectionWrapper>
 </div>

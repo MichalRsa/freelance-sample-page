@@ -27,7 +27,7 @@ const renderedRichText = renderRichText(blok.description);
     <div
       class="m-auto flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500"
     >
-      <div class="max-w-96 p-12">
+      <div class="max-w-96 p-4 md:p-12">
         <p class="mb-8 font-bold">{blok.address}</p>
         <div set:html={renderedRichText} class="mb-10" />
         <Button text={blok.cta} classes="bg-ternary-500" />
