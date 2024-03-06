@@ -17,10 +17,10 @@ const { blok } = Astro.props;
 
 <article
   {...storyblokEditable(blok)}
-  class="w-80 bg-secondary-500 p-4 shadow-main shadow-text-500 first:-translate-y-12 last:translate-y-12"
+  class="mb-3 mr-3 w-64 bg-secondary-500 p-4 shadow-main shadow-text-500 first:-translate-y-12 last:translate-y-12 max-xl:shrink-0 md:w-72 xl:w-80"
 >
-  <div class="flex pb-16">
-    <div class="shadow-main shadow-text-500">
+  <div class="flex pb-8 md:pb-16">
+    <div class="shadow-main shadow-text-500 max-md:w-1/2">
       <Image src={blok.image.filename} alt="" width={150} height={150} />
     </div>
     <div class="flex flex-col pl-8">

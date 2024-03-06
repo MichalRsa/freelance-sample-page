@@ -20,7 +20,9 @@ const { blok } = Astro.props;
 <div {...storyblokEditable(blok)}>
   <SectionWrapper bgColor={blok.background_color}>
     <SectionTitle title={blok.title} />
-    <div class="flex items-stretch justify-between gap-11 py-12">
+    <div
+      class="flex justify-between gap-4 overflow-x-auto py-12 max-xl:-mx-12 max-md:-mx-2 max-md:pl-2 xl:gap-8"
+    >
       {
         blok.reviews?.map((blok: any) => {
           return <StoryblokComponent blok={blok} />;
