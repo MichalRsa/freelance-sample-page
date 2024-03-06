@@ -25,14 +25,14 @@ const renderedRichText = renderRichText(blok.description);
   <SectionWrapper bgColor={blok.background_color}>
     <SectionTitle title={blok.title} />
     <div
-      class="m-auto flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500"
+      class="m-auto max-md:flex-col-reverse flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500"
     >
-      <div class="max-w-96 p-4 md:p-12">
+      <div class="md:max-w-72 lg:max-w-96 p-4 md:p-12">
         <p class="mb-8 font-bold">{blok.address}</p>
         <div set:html={renderedRichText} class="mb-10" />
         <Button text={blok.cta} classes="bg-ternary-500" />
       </div>
-      <div class="w-full self-stretch bg-text-300"></div>
+      <div class="w-full max-md:h-64 md:self-stretch bg-text-300"></div>
     </div>
   </SectionWrapper>
 </div>
