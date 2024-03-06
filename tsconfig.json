@@ -3,6 +3,11 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "exactOptionalPropertyTypes": false, 
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+     "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }

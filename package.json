@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "lint": "eslint 'src/**'",
     "proxy": "local-ssl-proxy --source 3010 --target 4321 --cert localhost.pem --key localhost-key.pem"
   },
@@ -16,6 +17,7 @@
     "@astrojs/netlify": "^5.0.1",
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.5.3",
     "@fontsource/lora": "^5.0.13",
     "@fontsource/rubik": "^5.0.18",
     "@storyblok/astro": "^4.0.2",
