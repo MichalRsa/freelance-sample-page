@@ -1,7 +1,8 @@
 ---
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
-import { getTransLink, languages } from "../utils/langs";
+import { getTransLink } from "../utils/langs";
 import type { Props as LinkProps } from "../storyblok/Link.astro";
+import Hamburger from "./Hamburger.astro";
 
 const { blok, language, langSwitch } = Astro.props;
 
@@ -10,23 +11,37 @@ const menu = blok.menu;
 const lang = language === "en" ? "es" : "en";
 ---
 
-<header class="absolute z-50 w-full bg-primary-700 px-2 py-4 md:px-12">
-  <div class="container mx-auto flex h-full items-center justify-between">
-    <a href={getTransLink(language, "/")}>
-      <h1 class="text-2xl text-secondary-100">
-        Kawusia <span class="max-md:hidden">| Coffe Bar</span>
-      </h1>
-    </a>
-    <nav>
-      <ul class="flex items-center space-x-8 text-base font-bold">
+<header class="absolute z-50 w-full xl:bg-primary-700 xl:px-12 xl:py-4">
+  <div class="flex h-full items-center justify-between max-xl:flex-col">
+    <div
+      class="flex w-full justify-between bg-primary-700 max-xl:px-2 max-xl:py-1"
+    >
+      <a href={getTransLink(language, "/")}>
+        <h1 class="text-2xl text-secondary-100">
+          Kawusia <span class="max-md:hidden">| Coffe Bar</span>
+        </h1>
+      </a>
+
+      <div class="flex items-center xl:hidden">
+        <Hamburger />
+      </div>
+    </div>
+    <nav
+      data-id="nav"
+      data-visible="false"
+      class="backdrop-blur-sm max-xl:w-full max-xl:bg-primary-600/80 max-xl:data-[visible=false]:hidden"
+    >
+      <ul
+        class="flex items-center text-base font-bold max-xl:flex-col xl:space-x-8"
+      >
         {
           menu.map((menuItem: LinkProps) => (
-            <li>
+            <li class="max-xl:m-4">
               <StoryblokComponent blok={{ ...menuItem, language }} />
             </li>
           ))
         }
-        <li>
+        <li class="max-xl:m-4">
           <a
             class={"px-2 text-secondary-100 hover:bg-primary-200 bg-primary-300"}
             href={langSwitch[lang]}
@@ -38,3 +53,22 @@ const lang = language === "en" ? "es" : "en";
     </nav>
   </div>
 </header>
+
+<script>
+  const button = document.querySelector("[data-id='hamburger']");
+  const nav = document.querySelector("[data-id='nav']");
+
+  const toggleMenu = () => {
+    const isVisible = button?.getAttribute("data-visible");
+
+    if (isVisible === "true") {
+      button?.setAttribute("data-visible", "false");
+      nav?.setAttribute("data-visible", "false");
+    } else if (isVisible === "false") {
+      button?.setAttribute("data-visible", "true");
+      nav?.setAttribute("data-visible", "true");
+    }
+  };
+
+  button?.addEventListener("click", toggleMenu);
+</script>

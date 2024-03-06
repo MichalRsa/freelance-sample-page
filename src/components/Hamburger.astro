@@ -1,0 +1,62 @@
+---
+const {} = Astro.props;
+---
+
+<button data-id="hamburger" data-visible="false" class="hamburger-menu">
+  <span class="hamburger-menu"></span>
+</button>
+
+<style>
+  :root {
+    --bar-width: 44px;
+    --bar-height: 6px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 8px;
+    --animation-timing: 400ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  }
+
+  .hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: var(--hamburger-gap);
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu span {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    @apply bg-secondary-500;
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition:
+      opacity var(--animation-timing),
+      transform var(--animation-timing),
+      translate var(--animation-timing);
+  }
+
+  .hamburger-menu[data-visible="true"] span {
+    opacity: 0;
+  }
+
+  .hamburger-menu[data-visible="true"]::before {
+    transform: rotate(45deg);
+    width: var(--x-width);
+    translate: 7px calc(var(--bar-height) / -2);
+  }
+
+  .hamburger-menu[data-visible="true"]::after {
+    transform: rotate(-45deg);
+    width: var(--x-width);
+    translate: 7px calc(var(--bar-height) / 2);
+  }
+</style>
