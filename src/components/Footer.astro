@@ -9,15 +9,15 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
 ---
 
 <footer
-  class="flex w-full justify-between bg-primary-700 px-2 py-4 text-primary-50 md:px-20"
+  class="flex w-full justify-between bg-primary-700 px-2 py-4 text-primary-50 max-sm:flex-col md:px-20"
 >
-  <div>
-    <h3>Kawusia</h3>
-    <div class="flex justify-between flex-shrink">
+  <div class="max-sm:mb-4 max-sm:border-b max-sm:pb-2">
+    <h3 class="max-sm:text-center">Kawusia</h3>
+    <div class="flex flex-shrink justify-around">
       {
         socials.map((social: any) => (
           <a href="/">
-            <Image src={social.filename} alt="" width={96} height={96} />
+            <Image src={social.filename} alt="" width={80} height={80} />
           </a>
         ))
       }
@@ -31,11 +31,11 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
     <p class="pb-4 font-bold">Opening Hours</p>
     {
       (
-        <ul class="md:w-64">
+        <ul class=" md:w-64">
           {opening_hours.map((day: any) => (
             <li>
               <p class="flex justify-between pb-1">
-                <span>{day.day}</span>
+                <span class="pr-2">{day.day}</span>
                 <span>{day.hours}</span>
               </p>
             </li>
@@ -46,7 +46,9 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
   </div>
 
   <div>
-    <ul class="flex h-full flex-col justify-start text-base font-bold">
+    <ul
+      class="flex h-full flex-col justify-start text-base font-bold max-sm:hidden"
+    >
       {
         footer_menu.map((menuItem: LinkProps) => (
           <li class="mb-10">
