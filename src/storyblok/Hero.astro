@@ -5,29 +5,26 @@ import SectionWrapper from "../components/SectionWrapper.astro";
 import LinkButton from "./LinkButton.astro";
 
 const { blok } = Astro.props;
-let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
 ---
 
 <div
   {...storyblokEditable(blok)}
-  class={`${dynamicHeroClass} md:h-screen relative flex overflow-hidden pt-44`}
+  class="to-transparent relative flex overflow-hidden bg-gradient-to-r from-text-900/40 via-text-900/50 md:h-screen md:pt-24"
 >
   <Image
     src={blok.background_image.filename}
     alt={blok.background_image.alt}
-    class="absolute left-0 top-0 -z-50 h-full w-full object-cover"
+    class="absolute left-0 top-0 -z-50 h-full w-full object-cover max-md:scale-x-[-1]"
     width={1}
     height={1}
   />
   <SectionWrapper bgColor="transparent">
-    <div
-      class="from-black/70 via-black/50 to-transparent w-4/6 bg-gradient-to-t py-6"
-    >
+    <div class="py-6">
       <h1 class="mb-3 text-secondary-100">
         {blok.headline}
       </h1>
       <p
-        class="mb-3 font-lora text-base font-light text-secondary-100 md:text-2xl"
+        class="mb-3 max-w-[30ch] font-lora text-base font-light text-secondary-100 md:text-2xl"
       >
         {blok.subheadline}
       </p>
