@@ -4,13 +4,13 @@ import SectionWrapper, {
   type Props as SectionWrapperProps,
 } from "../components/SectionWrapper.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import Button from "../components/Button.astro";
+import LinkButton, { type Props as LinkButtonProps } from "./LinkButton.astro";
 
 interface Props {
   blok: {
     title: string;
     rating: number;
-    cta: string;
+    cta: LinkButtonProps["blok"][];
     background_color: SectionWrapperProps["bgColor"];
   };
 }
@@ -21,11 +21,11 @@ const { blok } = Astro.props;
 <div {...storyblokEditable(blok)}>
   <SectionWrapper bgColor={blok.background_color}>
     <SectionTitle title={blok.title} classes="text-center" />
-    <p class="text-center font-lora font-medium text-xl md:text-5xl">
+    <p class="text-center font-lora text-xl font-medium md:text-5xl">
       {blok.rating}
     </p>
     <div class="flex justify-center">
-      <Button text={blok.cta} />
+      {blok.cta[0] && <LinkButton blok={blok.cta[0]} />}
     </div>
   </SectionWrapper>
 </div>

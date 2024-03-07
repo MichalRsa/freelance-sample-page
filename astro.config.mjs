@@ -38,6 +38,7 @@ export default defineConfig({
         menu_hero: "storyblok/MenuHero",
         menu_cards: "storyblok/MenuCards",
         menu_card: "storyblok/MenuCard",
+        link_button: "storyblok/LinkButton",
       },
     }),
     tailwind(),

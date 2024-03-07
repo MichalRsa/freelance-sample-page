@@ -1,8 +1,8 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
-import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import LinkButton from "./LinkButton.astro";
 
 const { blok } = Astro.props;
 let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
@@ -31,7 +31,7 @@ let dynamicHeroClass = blok.layout === "constrained" ? "container mx-auto" : "";
       >
         {blok.subheadline}
       </p>
-      <Button text="Menu" />
+      <LinkButton blok={blok.cta[0]} />
     </div>
   </SectionWrapper>
 </div>

@@ -4,14 +4,14 @@ import SectionWrapper, {
   type Props as SectionWrapperProps,
 } from "../components/SectionWrapper.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import Button from "../components/Button.astro";
+import LinkButton, { type Props as LinkButtonProps } from "./LinkButton.astro";
 
 interface Props {
   blok: {
     title: string;
     address: string;
     description: any;
-    cta: string;
+    cta: LinkButtonProps["blok"][];
     background_color: SectionWrapperProps["bgColor"];
   };
 }
@@ -30,7 +30,7 @@ const renderedRichText = renderRichText(blok.description);
       <div class="p-4 md:max-w-72 md:p-12 lg:max-w-96">
         <p class="mb-8 font-bold">{blok.address}</p>
         <div set:html={renderedRichText} class="mb-10" />
-        <Button text={blok.cta} classes="bg-ternary-500" />
+        {blok.cta[0] && <LinkButton blok={blok.cta[0]} />}
       </div>
       <div class="w-full bg-text-300 max-md:h-64 md:self-stretch"></div>
     </div>
