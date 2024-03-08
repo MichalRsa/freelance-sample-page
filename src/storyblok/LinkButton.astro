@@ -1,25 +1,34 @@
 ---
+import { getTransLink } from "../utils/langs";
+
 export interface Props {
   blok: {
     text: string;
     link: {
+      url?: string;
       anchor?: string;
       cached_url: string;
       story?: {
         name: string;
+        slug: string;
       };
     };
-    language: string;
     fontSize?: string;
     color?: "white" | "black";
     font?: "lora" | "rubik";
     style: "primary" | "secondary" | "ternary";
   };
+  language: string;
 }
 
-const { blok } = Astro.props;
+const { blok, language } = Astro.props;
 
-const url = `${blok.link.cached_url}`;
+const isExternal = !!blok.link.url;
+
+const anchor = !!blok.link.anchor ? `#${blok.link.anchor}` : "";
+const url = isExternal
+  ? blok.link.url
+  : getTransLink(language, `/${blok.link.story?.slug}${anchor}`);
 
 const styles = {
   color: {

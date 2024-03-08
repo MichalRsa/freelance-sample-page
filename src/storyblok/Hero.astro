@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import LinkButton from "./LinkButton.astro";
 
-const { blok } = Astro.props;
+const { blok, language } = Astro.props;
 ---
 
 <div
@@ -28,7 +28,7 @@ const { blok } = Astro.props;
       >
         {blok.subheadline}
       </p>
-      <LinkButton blok={blok.cta[0]} />
+      <LinkButton language={language} blok={blok.cta[0]} />
     </div>
   </SectionWrapper>
 </div>

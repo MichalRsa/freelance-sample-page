@@ -14,16 +14,17 @@ interface Props {
     teaser_card: any[];
     cta: LinkButtonProps["blok"][];
   };
+  language: string;
 }
 
-const { blok } = Astro.props;
+const { blok, language } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
   <SectionWrapper bgColor={blok.background_color}>
     <SectionTitle title={blok.title} />
     <div
-      class="flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-stretch sm:gap-11 sm:py-12 max-sm:pb-4"
+      class="flex flex-col items-center justify-between gap-4 max-sm:pb-4 sm:flex-row sm:items-stretch sm:gap-11 sm:py-12"
     >
       {
         blok.teaser_card?.map((blok: any) => {
@@ -31,6 +32,6 @@ const { blok } = Astro.props;
         })
       }
     </div>
-    {blok.cta[0] && <LinkButton blok={blok.cta[0]} />}
+    {blok.cta[0] && <LinkButton language={language} blok={blok.cta[0]} />}
   </SectionWrapper>
 </div>
