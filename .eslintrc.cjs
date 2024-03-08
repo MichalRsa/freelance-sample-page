@@ -40,4 +40,5 @@ module.exports = {
   rules: {
     "no-console": 1,
   },
+  ignorePatterns: ["component-types-sb.d.ts"],
 };

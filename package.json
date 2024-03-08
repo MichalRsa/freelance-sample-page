@@ -10,7 +10,8 @@
     "astro": "astro",
     "check": "astro check",
     "lint": "eslint 'src/**'",
-    "proxy": "local-ssl-proxy --source 3010 --target 4321 --cert localhost.pem --key localhost-key.pem"
+    "proxy": "local-ssl-proxy --source 3010 --target 4321 --cert localhost.pem --key localhost-key.pem",
+    "generate-sb-types": "storyblok-generate-ts source=./components.277873.json target=./component-types-sb"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -46,6 +47,7 @@
     "postcss-nesting": "^12.0.3",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-tailwindcss": "^0.5.11"
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "storyblok-generate-ts": "^2.0.2"
   }
 }

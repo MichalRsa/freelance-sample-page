@@ -9,5 +9,6 @@
         "name": "@astrojs/ts-plugin"
       }
     ]
-  }
+  },
+  "exclude": ["component-types-sb.d.ts"]
 }
