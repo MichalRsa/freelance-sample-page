@@ -1,6 +1,6 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
-import Link from "./Link.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const { blok, language } = Astro.props;
 ---
@@ -16,14 +16,14 @@ const { blok, language } = Astro.props;
       <div class="flex justify-around">
         {
           blok.links.map((blok: any) => (
-            <Link
+            <StoryblokComponent
               blok={{
                 ...blok,
                 fontSize: "text-2xl",
                 color: "black",
                 font: "lora",
-                language,
               }}
+              language={language}
             />
           ))
         }

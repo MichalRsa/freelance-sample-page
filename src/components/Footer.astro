@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import type { Props as LinkProps } from "../storyblok/Link.astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import type { SbBlokData } from "@storyblok/astro";
 
 const { blok, language } = Astro.props;
 
@@ -50,9 +51,9 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
       class="flex h-full flex-col justify-start text-base font-bold max-sm:hidden"
     >
       {
-        footer_menu.map((menuItem: LinkProps) => (
+        footer_menu.map((menuItem: SbBlokData) => (
           <li class="mb-10">
-            <StoryblokComponent blok={{ ...menuItem, language }} />
+            <StoryblokComponent blok={menuItem} language={language} />
           </li>
         ))
       }

@@ -37,7 +37,7 @@ const lang = language === "en" ? "es" : "en";
         {
           menu.map((menuItem: LinkProps) => (
             <li class="max-xl:m-4">
-              <StoryblokComponent blok={{ ...menuItem, language }} />
+              <StoryblokComponent blok={menuItem} language={language} />
             </li>
           ))
         }

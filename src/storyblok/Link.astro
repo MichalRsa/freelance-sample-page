@@ -14,21 +14,22 @@ export interface Props {
 
     text: string;
     style: "link" | "primary" | "secondary";
-    language: string;
     fontSize?: string;
     color?: "white" | "black";
     font?: "lora" | "rubik";
   };
+
+  language: string;
 }
 
-const { blok } = Astro.props;
+const { blok, language } = Astro.props;
 
 const isExternal = !!blok.link.url;
 
 const anchor = !!blok.link.anchor ? `#${blok.link.anchor}` : "";
 const url = isExternal
   ? blok.link.url
-  : getTransLink(blok.language, `/${blok.link.story.slug}${anchor}`);
+  : getTransLink(language, `/${blok.link.story.slug}${anchor}`);
 
 const styles = {
   color: {
