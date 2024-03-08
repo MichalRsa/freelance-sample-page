@@ -26,7 +26,7 @@ const { blok, language } = Astro.props;
       {blok.rating}
     </p>
     <div class="flex justify-center">
-      {blok.cta[0] && <LinkButton language={language} blok={blok.cta[0]} />}
+      {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
     </div>
   </SectionWrapper>
 </div>

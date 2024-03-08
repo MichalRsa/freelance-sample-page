@@ -31,7 +31,7 @@ const renderedRichText = renderRichText(blok.description);
       <div class="p-4 md:max-w-72 md:p-12 lg:max-w-96">
         <p class="mb-8 font-bold">{blok.address}</p>
         <div set:html={renderedRichText} class="mb-10" />
-        {blok.cta[0] && <LinkButton language={language} blok={blok.cta[0]} />}
+        {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
       </div>
       <div class="w-full bg-text-300 max-md:h-64 md:self-stretch"></div>
     </div>

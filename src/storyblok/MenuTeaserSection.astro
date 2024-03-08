@@ -32,6 +32,6 @@ const { blok, language } = Astro.props;
         })
       }
     </div>
-    {blok.cta[0] && <LinkButton language={language} blok={blok.cta[0]} />}
+    {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
   </SectionWrapper>
 </div>
