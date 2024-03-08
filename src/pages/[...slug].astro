@@ -10,6 +10,7 @@ export async function getStaticPaths() {
   //We have moved all the code to a generateStaticPaths() function.
   return await generateStaticPaths();
 }
+
 const params = Astro.params;
 let props = isPreview() ? parseUrl(params?.slug) : Astro.props;
 const { slug, language, langSwitch } = props;
