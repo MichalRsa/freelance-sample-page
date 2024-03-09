@@ -1,9 +1,8 @@
 ---
+import type { FaqCardStoryblok } from "../../component-types-sb";
+
 interface Props {
-  blok: {
-    question: string;
-    answer: string;
-  };
+  blok: FaqCardStoryblok;
 }
 
 const { blok } = Astro.props;
@@ -11,11 +10,11 @@ const { blok } = Astro.props;
 
 <faq-card>
   <div
-    class="animationHidden animationLeft mb-8 bg-secondary-500 p-2 md:p-4 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200"
+    class="animationHidden animationLeft mb-8 bg-secondary-500 p-2 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200 md:p-4"
   >
     <button
       data-faq-button
-      class="flex w-full items-center justify-between focus:outline-none md:text-xl font-lora"
+      class="flex w-full items-center justify-between font-lora focus:outline-none md:text-xl"
     >
       <span class="text-left">{blok.question}</span>
       <div class="h-6 min-w-[24px] flex-grow-0 transition-all">
@@ -29,7 +28,7 @@ const { blok } = Astro.props;
       </div>
     </button>
     <div data-faq-accordion class="grid transition-all">
-      <div class="overflow-hidden ">
+      <div class="overflow-hidden">
         <p class="pt-4">{blok.answer}</p>
       </div>
     </div>

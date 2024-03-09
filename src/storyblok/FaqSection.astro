@@ -1,7 +1,12 @@
 ---
+import type { FaqSectionStoryblok } from "../../component-types-sb";
 import SectionTitle from "../components/SectionTitle.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import FaqCard from "./FaqCard.astro";
+
+interface Props {
+  blok: FaqSectionStoryblok;
+}
 
 const { blok } = Astro.props;
 ---
@@ -11,7 +16,7 @@ const { blok } = Astro.props;
 
   <div>
     {
-      blok.faq_cards.map((blok: any) => (
+      blok.faq_cards.map((blok) => (
         <div class="box-border max-lg:my-8">
           <FaqCard blok={blok} />
         </div>
