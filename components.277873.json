@@ -538,11 +538,12 @@
       "name": "menu_card",
       "display_name": null,
       "created_at": "2024-03-05T04:25:04.109Z",
-      "updated_at": "2024-03-05T04:34:00.813Z",
+      "updated_at": "2024-03-09T09:20:16.469Z",
       "id": 5439357,
       "schema": {
         "title": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "menu": {
           "type": "bloks",
@@ -551,7 +552,8 @@
           "restrict_components": true,
           "component_whitelist": [
             "menu_row"
-          ]
+          ],
+          "required": true
         }
       },
       "image": null,
@@ -571,7 +573,7 @@
       "name": "menu_cards",
       "display_name": null,
       "created_at": "2024-03-05T04:35:26.128Z",
-      "updated_at": "2024-03-05T04:37:58.959Z",
+      "updated_at": "2024-03-09T09:18:32.856Z",
       "id": 5439359,
       "schema": {
         "menu": {
@@ -580,7 +582,9 @@
           "restrict_components": true,
           "component_whitelist": [
             "menu_card"
-          ]
+          ],
+          "required": true,
+          "minimum": 1
         }
       },
       "image": null,

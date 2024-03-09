@@ -238,15 +238,15 @@ export interface MapSectionStoryblok {
 }
 
 export interface MenuCardStoryblok {
-  title?: string;
-  menu?: MenuRowStoryblok[];
+  title: string;
+  menu: MenuRowStoryblok[];
   _uid: string;
   component: "menu_card";
   [k: string]: any;
 }
 
 export interface MenuCardsStoryblok {
-  menu?: MenuCardStoryblok[];
+  menu: MenuCardStoryblok[];
   _uid: string;
   component: "menu_cards";
   [k: string]: any;
