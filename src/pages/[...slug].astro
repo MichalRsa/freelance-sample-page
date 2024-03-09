@@ -5,6 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import parseUrl from "../utils/parseUrl";
 import isPreview from "../utils/isPreview";
 import generateStaticPaths from "../utils/generateStaticPaths";
+import type { PageStoryblok } from "../../component-types-sb.d.ts";
 
 export async function getStaticPaths() {
   //We have moved all the code to a generateStaticPaths() function.
@@ -24,7 +25,7 @@ const { data } = await storyblokApi.get(
     language,
   },
 );
-const story = data.story;
+const story = data.story as PageStoryblok;
 ---
 
 <BaseLayout langSwitch={langSwitch} language={language}>

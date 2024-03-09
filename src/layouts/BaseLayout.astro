@@ -4,6 +4,10 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 import isPreview from "../utils/isPreview";
+import type {
+  MainFooterStoryblok,
+  MainHeaderStoryblok,
+} from "../../component-types-sb";
 
 const { language, langSwitch } = Astro.props;
 
@@ -14,8 +18,8 @@ const { data } = await storyblokApi.get("cdn/stories/config", {
   resolve_links: "url",
 });
 
-const header = data.story.content.header[0];
-const footer = data.story.content.footer[0];
+const header = data.story.content.header[0] as MainHeaderStoryblok;
+const footer = data.story.content.footer[0] as MainFooterStoryblok;
 ---
 
 <html lang="en">
@@ -28,6 +32,6 @@ const footer = data.story.content.footer[0];
   <body class="mx-auto">
     <Header blok={header} langSwitch={langSwitch} language={language} />
     <slot />
-    <Footer blok={footer} langSwitch={langSwitch} language={language} />
+    <Footer blok={footer} language={language} />
   </body>
 </html>

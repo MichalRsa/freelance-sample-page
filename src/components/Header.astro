@@ -1,8 +1,14 @@
 ---
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import { getTransLink } from "../utils/langs";
-import type { Props as LinkProps } from "../storyblok/Link.astro";
 import Hamburger from "./Hamburger.astro";
+import type { MainHeaderStoryblok } from "../../component-types-sb";
+
+interface Props {
+  blok: MainHeaderStoryblok;
+  language: string;
+  langSwitch: Record<string, string>;
+}
 
 const { blok, language, langSwitch } = Astro.props;
 
@@ -35,11 +41,12 @@ const lang = language === "en" ? "es" : "en";
         class="flex items-center text-base font-bold max-xl:flex-col xl:space-x-8"
       >
         {
-          menu.map((menuItem: LinkProps) => (
-            <li class="max-xl:m-4">
-              <StoryblokComponent blok={menuItem} language={language} />
-            </li>
-          ))
+          !!menu?.length &&
+            menu.map((menuItem) => (
+              <li class="max-xl:m-4">
+                <StoryblokComponent blok={menuItem} language={language} />
+              </li>
+            ))
         }
         <li class="max-xl:m-4">
           <a

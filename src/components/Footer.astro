@@ -1,8 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import type { Props as LinkProps } from "../storyblok/Link.astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import type { SbBlokData } from "@storyblok/astro";
+import type { MainFooterStoryblok } from "../../component-types-sb";
+
+interface Props {
+  blok: MainFooterStoryblok;
+  language: string;
+}
 
 const { blok, language } = Astro.props;
 
@@ -14,49 +19,52 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
 >
   <div class="max-sm:mb-4 max-sm:border-b max-sm:pb-2">
     <h3 class="max-sm:text-center">Kawusia</h3>
-    <div class="flex flex-shrink justify-around">
-      {
-        socials.map((social: any) => (
-          <a href="/">
-            <Image src={social.filename} alt="" width={80} height={80} />
-          </a>
-        ))
-      }
-    </div>
+    {
+      !!socials?.length && (
+        <div class="flex flex-shrink justify-around">
+          {socials.map((social: any) => (
+            <a href="/">
+              <Image src={social.filename} alt="" width={80} height={80} />
+            </a>
+          ))}
+        </div>
+      )
+    }
     <a
       href={`tel:${phone_number}`}
       class="block pt-4 text-center text-md underline">{phone_number}</a
     >
   </div>
-  <div>
-    <p class="pb-4 font-bold">Opening Hours</p>
-    {
-      (
-        <ul class=" md:w-64">
-          {opening_hours.map((day: any) => (
-            <li>
-              <p class="flex justify-between pb-1">
-                <span class="pr-2">{day.day}</span>
-                <span>{day.hours}</span>
-              </p>
+  {
+    !!opening_hours?.length && (
+      <div>
+        <p class="pb-4 font-bold">Opening Hours</p>
+        {
+          <ul class=" md:w-64">
+            {opening_hours.map((day: any) => (
+              <li>
+                <p class="flex justify-between pb-1">
+                  <span class="pr-2">{day.day}</span>
+                  <span>{day.hours}</span>
+                </p>
+              </li>
+            ))}
+          </ul>
+        }
+      </div>
+    )
+  }
+  {
+    !!footer_menu?.length && (
+      <div>
+        <ul class="flex h-full flex-col justify-start text-base font-bold max-sm:hidden">
+          {footer_menu.map((menuItem: SbBlokData) => (
+            <li class="mb-10">
+              <StoryblokComponent blok={menuItem} language={language} />
             </li>
           ))}
         </ul>
-      )
-    }
-  </div>
-
-  <div>
-    <ul
-      class="flex h-full flex-col justify-start text-base font-bold max-sm:hidden"
-    >
-      {
-        footer_menu.map((menuItem: SbBlokData) => (
-          <li class="mb-10">
-            <StoryblokComponent blok={menuItem} language={language} />
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+      </div>
+    )
+  }
 </footer>
