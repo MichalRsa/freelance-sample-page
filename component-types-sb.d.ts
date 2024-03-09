@@ -270,8 +270,8 @@ export interface MenuRowStoryblok {
 }
 
 export interface MenuTeaserCardStoryblok {
-  title?: string;
-  image?: AssetStoryblok;
+  title: string;
+  image: AssetStoryblok;
   _uid: string;
   component: "menu_teaser_card";
   [k: string]: any;
@@ -280,7 +280,7 @@ export interface MenuTeaserCardStoryblok {
 export interface MenuTeaserSectionStoryblok {
   title?: string;
   teaser_card: MenuTeaserCardStoryblok[];
-  background_color?: "" | "primary" | "secondary";
+  background_color: "" | "primary" | "secondary";
   cta?: (LinkStoryblok | LinkButtonStoryblok)[];
   _uid: string;
   component: "menu_teaser_section";

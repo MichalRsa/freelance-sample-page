@@ -672,14 +672,19 @@
       "name": "menu_teaser_card",
       "display_name": null,
       "created_at": "2024-03-01T09:29:44.933Z",
-      "updated_at": "2024-03-01T09:30:15.664Z",
+      "updated_at": "2024-03-09T08:14:11.234Z",
       "id": 5423122,
       "schema": {
         "title": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "image": {
-          "type": "asset"
+          "type": "asset",
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
         }
       },
       "image": null,
@@ -699,7 +704,7 @@
       "name": "menu_teaser_section",
       "display_name": null,
       "created_at": "2024-03-01T09:28:09.185Z",
-      "updated_at": "2024-03-07T11:27:47.309Z",
+      "updated_at": "2024-03-09T08:21:43.150Z",
       "id": 5423117,
       "schema": {
         "title": {
@@ -738,7 +743,8 @@
               "name": "secondary"
             }
           ],
-          "default_value": "primary"
+          "default_value": "primary",
+          "required": true
         },
         "cta": {
           "type": "bloks",

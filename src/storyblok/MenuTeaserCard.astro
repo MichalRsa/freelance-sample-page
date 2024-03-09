@@ -2,12 +2,10 @@
 import { storyblokEditable } from "@storyblok/astro";
 import { Image } from "astro:assets";
 import Bulletpoint from "/public/Vector.svg";
+import type { MenuTeaserCardStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: {
-    title: string;
-    image: any;
-  };
+  blok: MenuTeaserCardStoryblok;
 }
 
 const { blok } = Astro.props;
@@ -21,7 +19,7 @@ const { blok } = Astro.props;
     <Image src={blok.image.filename} alt="" height={370} width={370} />
   </div>
   <div class="flex items-center pt-4">
-    <div class="max-md:w-6 p-1 md:pr-4">
+    <div class="p-1 max-md:w-6 md:pr-4">
       <Image src={Bulletpoint} alt="" />
     </div>
     <p class="font-lora text-base md:text-2xl">

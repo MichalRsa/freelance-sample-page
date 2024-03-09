@@ -1,18 +1,19 @@
 ---
 export interface Props {
-  bgColor: "primary" | "secondary" | "transparent";
+  bgColor: "" | "primary" | "secondary";
 }
 
 const { bgColor } = Astro.props;
 
-const bgColorClass = {
-  transparent: "bg-transparent",
+const bgColorClasses = {
   primary: "bg-primary-100",
   secondary: "bg-ternary-300",
 };
+
+const bgClass = bgColor ? bgColorClasses[bgColor] : bgColorClasses.primary;
 ---
 
-<section class:list={[bgColorClass[bgColor], "px-4 py-8 md:p-12"]}>
+<section class:list={[bgClass, "px-4 py-8 md:p-12"]}>
   <div class="mx-auto max-w-7xl">
     <slot />
   </div>

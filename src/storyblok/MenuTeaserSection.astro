@@ -1,19 +1,12 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
-import SectionWrapper, {
-  type Props as SectionWrapperProps,
-} from "../components/SectionWrapper.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import LinkButton, { type Props as LinkButtonProps } from "./LinkButton.astro";
+import type { MenuTeaserSectionStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: {
-    title: string;
-    background_color: SectionWrapperProps["bgColor"];
-    teaser_card: any[];
-    cta: LinkButtonProps["blok"][];
-  };
+  blok: MenuTeaserSectionStoryblok;
   language: string;
 }
 
@@ -22,16 +15,20 @@ const { blok, language } = Astro.props;
 
 <div {...storyblokEditable(blok)}>
   <SectionWrapper bgColor={blok.background_color}>
-    <SectionTitle title={blok.title} />
+    {!!blok.title && <SectionTitle title={blok.title} />}
     <div
       class="flex flex-col items-center justify-between gap-4 max-sm:pb-4 sm:flex-row sm:items-stretch sm:gap-11 sm:py-12"
     >
       {
-        blok.teaser_card?.map((blok: any) => {
+        blok.teaser_card.map((blok) => {
           return <StoryblokComponent blok={blok} />;
         })
       }
     </div>
-    {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
+    {
+      blok.cta?.[0] && (
+        <StoryblokComponent language={language} blok={blok.cta[0]} />
+      )
+    }
   </SectionWrapper>
 </div>
