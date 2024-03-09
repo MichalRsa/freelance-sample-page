@@ -1,18 +1,12 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
-import SectionWrapper, {
-  type Props as SectionWrapperProps,
-} from "../components/SectionWrapper.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import LinkButton, { type Props as LinkButtonProps } from "./LinkButton.astro";
+import LinkButton from "./LinkButton.astro";
+import type { RatingStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: {
-    title: string;
-    rating: number;
-    cta: LinkButtonProps["blok"][];
-    background_color: SectionWrapperProps["bgColor"];
-  };
+  blok: RatingStoryblok;
   language: string;
 }
 

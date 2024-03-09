@@ -22,7 +22,7 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
     {
       !!socials?.length && (
         <div class="flex flex-shrink justify-around">
-          {socials.map((social: any) => (
+          {socials.map((social) => (
             <a href="/">
               <Image src={social.filename} alt="" width={80} height={80} />
             </a>
@@ -41,7 +41,7 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
         <p class="pb-4 font-bold">Opening Hours</p>
         {
           <ul class=" md:w-64">
-            {opening_hours.map((day: any) => (
+            {opening_hours.map((day) => (
               <li>
                 <p class="flex justify-between pb-1">
                   <span class="pr-2">{day.day}</span>

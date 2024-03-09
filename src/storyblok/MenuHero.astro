@@ -22,7 +22,7 @@ const { blok, language } = Astro.props;
       !!blok.links && (
         <div class="mx-auto max-w-96">
           <div class="flex justify-around">
-            {blok.links.map((blok: any) => (
+            {blok.links.map((blok) => (
               <StoryblokComponent
                 blok={{
                   ...blok,

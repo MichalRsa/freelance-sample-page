@@ -1,15 +1,10 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import { Image } from "astro:assets";
+import type { ReviewCardStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: {
-    name: string;
-    role: string;
-    rating: string;
-    review: string;
-    image: any;
-  };
+  blok: ReviewCardStoryblok;
 }
 
 const { blok } = Astro.props;

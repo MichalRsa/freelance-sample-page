@@ -227,7 +227,7 @@ export interface MainHeaderStoryblok {
 }
 
 export interface MapSectionStoryblok {
-  title?: string;
+  title: string;
   address?: string;
   description?: RichtextStoryblok;
   cta?: LinkButtonStoryblok[];
@@ -314,8 +314,8 @@ export interface PopularArticlesStoryblok {
 }
 
 export interface RatingStoryblok {
-  title?: string;
-  rating?: string;
+  title: string;
+  rating: string;
   cta?: LinkButtonStoryblok[];
   background_color: "" | "primary" | "secondary";
   _uid: string;
@@ -324,19 +324,19 @@ export interface RatingStoryblok {
 }
 
 export interface ReviewCardStoryblok {
-  image?: AssetStoryblok;
-  name?: string;
-  role?: string;
-  rating?: string;
-  review?: string;
+  image: AssetStoryblok;
+  name: string;
+  role: string;
+  rating: string;
+  review: string;
   _uid: string;
   component: "review-card";
   [k: string]: any;
 }
 
 export interface ReviewsStoryblok {
-  title?: string;
-  reviews?: ReviewCardStoryblok[];
+  title: string;
+  reviews: ReviewCardStoryblok[];
   background_color: "" | "primary" | "secondary";
   _uid: string;
   component: "reviews";

@@ -1,19 +1,12 @@
 ---
 import { renderRichText, storyblokEditable } from "@storyblok/astro";
-import SectionWrapper, {
-  type Props as SectionWrapperProps,
-} from "../components/SectionWrapper.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import LinkButton, { type Props as LinkButtonProps } from "./LinkButton.astro";
+import LinkButton from "./LinkButton.astro";
+import type { MapSectionStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: {
-    title: string;
-    address: string;
-    description: any;
-    cta: LinkButtonProps["blok"][];
-    background_color: SectionWrapperProps["bgColor"];
-  };
+  blok: MapSectionStoryblok;
   language: string;
 }
 
@@ -29,8 +22,12 @@ const renderedRichText = renderRichText(blok.description);
       class="m-auto flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500 max-md:flex-col-reverse"
     >
       <div class="p-4 md:max-w-72 md:p-12 lg:max-w-96">
-        <p class="mb-8 font-bold">{blok.address}</p>
-        <div set:html={renderedRichText} class="mb-10" />
+        {!!blok.address && <p class="mb-8 font-bold">{blok.address}</p>}
+        {
+          !!blok.description && (
+            <div set:html={renderedRichText} class="mb-10" />
+          )
+        }
         {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
       </div>
       <div class="w-full bg-text-300 max-md:h-64 md:self-stretch"></div>
