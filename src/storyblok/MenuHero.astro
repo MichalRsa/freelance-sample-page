@@ -1,6 +1,12 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import type { MenuHeroStoryblok } from "../../component-types-sb";
+
+interface Props {
+  blok: MenuHeroStoryblok;
+  language: string;
+}
 
 const { blok, language } = Astro.props;
 ---
@@ -12,22 +18,24 @@ const { blok, language } = Astro.props;
     <h1 class="mb-10 text-center text-5xl font-bold text-text-500">
       {blok.title}
     </h1>
-    <div class="mx-auto max-w-96">
-      <div class="flex justify-around">
-        {
-          blok.links.map((blok: any) => (
-            <StoryblokComponent
-              blok={{
-                ...blok,
-                fontSize: "text-2xl",
-                color: "black",
-                font: "lora",
-              }}
-              language={language}
-            />
-          ))
-        }
-      </div>
-    </div>
+    {
+      !!blok.links && (
+        <div class="mx-auto max-w-96">
+          <div class="flex justify-around">
+            {blok.links.map((blok: any) => (
+              <StoryblokComponent
+                blok={{
+                  ...blok,
+                  fontSize: "text-2xl",
+                  color: "black",
+                  font: "lora",
+                }}
+                language={language}
+              />
+            ))}
+          </div>
+        </div>
+      )
+    }
   </div>
 </div>

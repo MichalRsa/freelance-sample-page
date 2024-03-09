@@ -245,11 +245,12 @@
       "name": "hero",
       "display_name": null,
       "created_at": "2024-02-28T10:02:20.746Z",
-      "updated_at": "2024-03-07T12:10:59.528Z",
+      "updated_at": "2024-03-09T08:38:40.000Z",
       "id": 5409029,
       "schema": {
         "headline": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "subheadline": {
           "type": "text"
@@ -258,25 +259,8 @@
           "type": "asset",
           "filetypes": [
             "images"
-          ]
-        },
-        "layout": {
-          "type": "option",
-          "use_uuid": true,
-          "options": [
-            {
-              "_uid": "8e563c4c-b715-4d9b-9a4b-b4bb4f7a1e66",
-              "name": "Constrained",
-              "value": "constrained"
-            },
-            {
-              "_uid": "01f10e7c-be91-429c-84f5-e7a3dce84dcf",
-              "value": "full-width",
-              "name": "Full Width"
-            }
           ],
-          "default_value": "constrained",
-          "exclude_empty_option": true
+          "required": true
         },
         "cta": {
           "type": "bloks",
@@ -355,14 +339,16 @@
       "name": "link_button",
       "display_name": null,
       "created_at": "2024-03-07T11:17:58.459Z",
-      "updated_at": "2024-03-07T13:34:00.599Z",
+      "updated_at": "2024-03-09T08:52:52.736Z",
       "id": 5457033,
       "schema": {
         "text": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "link": {
-          "type": "multilink"
+          "type": "multilink",
+          "required": true
         },
         "style": {
           "type": "option",
@@ -379,14 +365,15 @@
             },
             {
               "_uid": "f32ec422-7f66-407b-9db5-5c8bf2ae63c8",
-              "value": "Ternary",
+              "value": "ternary",
               "name": "Ternary"
             }
           ],
           "default_value": "primary",
           "min_options": "1",
           "max_options": "1",
-          "use_uuid": true
+          "use_uuid": true,
+          "required": true
         }
       },
       "image": null,
@@ -613,11 +600,12 @@
       "name": "menu_hero",
       "display_name": null,
       "created_at": "2024-03-04T14:52:10.519Z",
-      "updated_at": "2024-03-04T14:53:42.342Z",
+      "updated_at": "2024-03-09T08:38:57.645Z",
       "id": 5436900,
       "schema": {
         "title": {
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "links": {
           "type": "bloks",

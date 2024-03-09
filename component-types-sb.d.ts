@@ -119,10 +119,9 @@ export interface GridStoryblok {
 }
 
 export interface HeroStoryblok {
-  headline?: string;
+  headline: string;
   subheadline?: string;
-  background_image?: AssetStoryblok;
-  layout?: "constrained" | "full-width";
+  background_image: AssetStoryblok;
   cta?: LinkButtonStoryblok[];
   _uid: string;
   component: "hero";
@@ -192,9 +191,9 @@ export interface LinkStoryblok {
 }
 
 export interface LinkButtonStoryblok {
-  text?: string;
-  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
-  style?: "" | "primary" | "secondary" | "Ternary";
+  text: string;
+  link: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  style: "" | "primary" | "secondary" | "ternary";
   _uid: string;
   component: "link_button";
   [k: string]: any;
@@ -254,7 +253,7 @@ export interface MenuCardsStoryblok {
 }
 
 export interface MenuHeroStoryblok {
-  title?: string;
+  title: string;
   links?: LinkStoryblok[];
   _uid: string;
   component: "menu_hero";

@@ -3,6 +3,12 @@ import { storyblokEditable } from "@storyblok/astro";
 import { Image } from "astro:assets";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import LinkButton from "./LinkButton.astro";
+import type { HeroStoryblok } from "../../component-types-sb";
+
+interface Props {
+  blok: HeroStoryblok;
+  language: string;
+}
 
 const { blok, language } = Astro.props;
 ---
@@ -13,12 +19,12 @@ const { blok, language } = Astro.props;
 >
   <Image
     src={blok.background_image.filename}
-    alt={blok.background_image.alt}
+    alt={blok.background_image?.alt || ""}
     class="absolute left-0 top-0 -z-50 h-full w-full object-cover max-md:scale-x-[-1]"
     width={1}
     height={1}
   />
-  <SectionWrapper bgColor="transparent">
+  <SectionWrapper>
     <div class="py-6">
       <h1 class="mb-3 text-secondary-100">
         {blok.headline}
