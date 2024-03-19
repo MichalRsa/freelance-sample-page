@@ -22,6 +22,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -56,6 +57,7 @@
       "component_group_uuid": "8106709f-38a1-4951-845f-07f88e8d6a51",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Pages"
     },
     {
@@ -95,7 +97,123 @@
       "component_group_uuid": "d64961a8-f329-4096-a8ea-6cf99d982532",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Layout"
+    },
+    {
+      "name": "contact_section",
+      "display_name": null,
+      "created_at": "2024-03-19T12:54:31.397Z",
+      "updated_at": "2024-03-19T13:57:12.950Z",
+      "id": 5522050,
+      "schema": {
+        "location": {
+          "type": "section",
+          "pos": 0,
+          "keys": [
+            "address",
+            "description",
+            "cta",
+            "title"
+          ]
+        },
+        "tab-25b36652-6ebc-4b93-93cb-8b509eb63946": {
+          "display_name": "styles",
+          "keys": [
+            "background_color"
+          ],
+          "pos": 0,
+          "type": "tab"
+        },
+        "background_color": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "296ef360-9b80-4755-97bc-237f15b96a7c",
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "_uid": "ba459b85-5dce-41bf-ad04-5e2b88d9aee4",
+              "value": "secondary",
+              "name": "Secondary"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1
+        },
+        "description": {
+          "type": "richtext",
+          "pos": 2
+        },
+        "address": {
+          "type": "text",
+          "pos": 3
+        },
+        "cta": {
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "link_button"
+          ],
+          "pos": 4
+        },
+        "opening_hours": {
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "day_opening_hours"
+          ],
+          "pos": 5
+        },
+        "contact": {
+          "type": "section",
+          "keys": [
+            "phone_number",
+            "email"
+          ],
+          "pos": 6
+        },
+        "phone_number": {
+          "type": "bloks",
+          "pos": 7,
+          "maximum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "link_button"
+          ]
+        },
+        "email": {
+          "type": "bloks",
+          "pos": 8,
+          "maximum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "link_button"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "contact_section",
+      "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
+      "color": null,
+      "icon": null,
+      "content_type_asset_preview": null,
+      "component_group_name": "Sections"
     },
     {
       "name": "day_opening_hours",
@@ -122,6 +240,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -149,6 +268,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -185,6 +305,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -215,6 +336,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -239,6 +361,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -283,6 +406,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -333,6 +457,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -387,6 +512,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -433,6 +559,7 @@
       "component_group_uuid": "d64961a8-f329-4096-a8ea-6cf99d982532",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Layout"
     },
     {
@@ -463,6 +590,7 @@
       "component_group_uuid": "d64961a8-f329-4096-a8ea-6cf99d982532",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Layout"
     },
     {
@@ -533,6 +661,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -568,6 +697,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -599,6 +729,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -632,6 +763,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -659,6 +791,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -691,6 +824,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -761,13 +895,14 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
       "name": "page",
       "display_name": null,
       "created_at": "2024-02-28T10:02:20.873Z",
-      "updated_at": "2024-03-01T09:31:06.474Z",
+      "updated_at": "2024-03-19T05:15:44.661Z",
       "id": 5409035,
       "schema": {
         "body": {
@@ -778,6 +913,22 @@
           "component_group_whitelist": [
             "8bfd1ee3-1073-4e4b-b8c5-e498a7992988"
           ]
+        },
+        "tab-b8b32b3a-49d2-4061-ab2e-c1f4dfe50272": {
+          "display_name": "SEO",
+          "keys": [
+            "title",
+            "description"
+          ],
+          "pos": 0,
+          "type": "tab"
+        },
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text",
+          "default_value": "Kawusia | Cafe bar"
         }
       },
       "image": null,
@@ -791,6 +942,7 @@
       "component_group_uuid": "8106709f-38a1-4951-845f-07f88e8d6a51",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Pages"
     },
     {
@@ -824,6 +976,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -890,6 +1043,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -941,6 +1095,7 @@
       "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Components"
     },
     {
@@ -1002,6 +1157,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     },
     {
@@ -1032,6 +1188,7 @@
       "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
       "color": null,
       "icon": null,
+      "content_type_asset_preview": null,
       "component_group_name": "Sections"
     }
   ]

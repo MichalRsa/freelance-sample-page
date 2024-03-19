@@ -40,6 +40,7 @@ export default defineConfig({
         menu_cards: "storyblok/MenuCards",
         menu_card: "storyblok/MenuCard",
         link_button: "storyblok/LinkButton",
+        contact_section: "storyblok/ContactSection",
       },
     }),
     tailwind(),

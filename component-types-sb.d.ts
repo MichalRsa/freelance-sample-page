@@ -52,6 +52,22 @@ export interface ConfigStoryblok {
   [k: string]: any;
 }
 
+export interface ContactSectionStoryblok {
+  location?: any;
+  background_color?: "" | "primary" | "secondary";
+  title?: string;
+  description?: RichtextStoryblok;
+  address?: string;
+  cta?: LinkButtonStoryblok[];
+  opening_hours?: DayOpeningHoursStoryblok[];
+  contact?: any;
+  phone_number?: LinkButtonStoryblok[];
+  email?: LinkButtonStoryblok[];
+  _uid: string;
+  component: "contact_section";
+  [k: string]: any;
+}
+
 export interface DayOpeningHoursStoryblok {
   day?: string;
   hours?: string;
@@ -89,6 +105,7 @@ export interface GridStoryblok {
     | AllArticlesStoryblok
     | ArticleStoryblok
     | ConfigStoryblok
+    | ContactSectionStoryblok
     | DayOpeningHoursStoryblok
     | FaqCardStoryblok
     | FaqSectionStoryblok
@@ -288,6 +305,7 @@ export interface MenuTeaserSectionStoryblok {
 
 export interface PageStoryblok {
   body?: (
+    | ContactSectionStoryblok
     | FaqSectionStoryblok
     | GridStoryblok
     | HeroStoryblok
@@ -299,6 +317,8 @@ export interface PageStoryblok {
     | ReviewsStoryblok
     | TeaserStoryblok
   )[];
+  title?: string;
+  description?: string;
   _uid: string;
   component: "page";
   uuid?: string;
