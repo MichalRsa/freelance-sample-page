@@ -8,8 +8,9 @@ import type {
   MainFooterStoryblok,
   MainHeaderStoryblok,
 } from "../../component-types-sb";
+import BaseHead from "../components/BaseHead.astro";
 
-const { language, langSwitch } = Astro.props;
+const { language, langSwitch, title, description } = Astro.props;
 
 const storyblokApi = useStoryblokApi();
 
@@ -24,10 +25,7 @@ const footer = data.story.content.footer[0] as MainFooterStoryblok;
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>The Storyblok Astro Ultimate Tutorial: Part 2</title>
+    <BaseHead title={title} description={description} />
   </head>
   <body class="mx-auto">
     <Header blok={header} langSwitch={langSwitch} language={language} />

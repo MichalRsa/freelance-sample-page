@@ -26,8 +26,17 @@ const { data } = await storyblokApi.get(
   },
 );
 const story = data.story as PageStoryblok;
+const storySEO = {
+  title: story.content.title,
+  description: story.content.description,
+};
 ---
 
-<BaseLayout langSwitch={langSwitch} language={language}>
+<BaseLayout
+  langSwitch={langSwitch}
+  language={language}
+  title={storySEO.title}
+  description={storySEO.description}
+>
   <StoryblokComponent language={language} blok={story.content} />
 </BaseLayout>

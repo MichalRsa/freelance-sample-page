@@ -12,6 +12,7 @@ const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://kawusia-coffe-bar.netlify.app/",
   integrations: [
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
