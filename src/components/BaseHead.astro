@@ -33,7 +33,7 @@ const _description = description ?? DEFAULT.DESCRIPTION;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<title>{_title}</title>
 <meta name="author" content="Michał Rosa" />
 <meta name="title" content={_title} />
 <meta name="description" content={_description} />
@@ -41,13 +41,13 @@ const _description = description ?? DEFAULT.DESCRIPTION;
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={_title} />
+<meta property="og:description" content={_description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
+<meta property="twitter:title" content={_title} />
+<meta property="twitter:description" content={_description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
