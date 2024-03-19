@@ -15,10 +15,14 @@ const renderedRichText = renderRichText(blok.description);
 ---
 
 <SectionWrapper {...storyblokEditable(blok)} bgColor={blok.background_color}>
-  <div class="flex w-full justify-between max-md:flex-col">
-    <div class="p-4 pl-0 md:w-1/2 md:p-12 lg:max-w-96">
-      <div class="mb-8">
-        {!!blok.title && <h2 class="mb-8 text-2xl font-bold">{blok.title}</h2>}
+  <div class="mt-12 flex w-full justify-between max-lg:flex-col">
+    <div class="p-4 pl-0 lg:w-1/2 lg:max-w-96 lg:py-12 lg:pr-12">
+      <div class="mb-12">
+        {
+          !!blok.title && (
+            <h2 class="mb-4 text-lg  font-bold md:text-2xl">{blok.title}</h2>
+          )
+        }
         {!!blok.address && <p class="mb-8 font-bold">{blok.address}</p>}
         {!!blok.description && <div set:html={renderedRichText} class="mb-6" />}
         {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
@@ -26,10 +30,10 @@ const renderedRichText = renderRichText(blok.description);
 
       {
         !!blok.opening_hours?.length && (
-          <div class="mb-8">
-            <h2 class="mb-8 text-2xl font-bold">Opening Hours</h2>
+          <div class="mb-12">
+            <h2 class="mb-4 text-lg font-bold md:text-2xl">Opening Hours</h2>
             {
-              <ul class=" md:w-64">
+              <ul class=" lg:w-64">
                 {blok.opening_hours.map((day) => (
                   <li>
                     <p class="flex justify-between pb-1">
@@ -45,8 +49,8 @@ const renderedRichText = renderRichText(blok.description);
       }
       {
         !!blok.opening_hours?.length && (
-          <div class="mb-8">
-            <h2 class="mb-8 text-2xl font-bold">Contact</h2>
+          <div class="mb-12">
+            <h2 class="mb-4 text-lg font-bold md:text-2xl">Contact</h2>
             <div class="flex flex-col gap-4">
               {blok.phone_number?.[0] && (
                 <LinkButton language={language} blok={blok.phone_number[0]} />
@@ -60,7 +64,9 @@ const renderedRichText = renderRichText(blok.description);
         )
       }
     </div>
-    <div class="my-16 w-full bg-text-300 max-md:h-64 md:w-1/2 md:self-stretch">
+    <div
+      class="w-full bg-text-300 max-lg:h-64 lg:my-16 lg:w-1/2 lg:self-stretch"
+    >
     </div>
   </div>
 </SectionWrapper>
