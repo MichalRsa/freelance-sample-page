@@ -1,0 +1,73 @@
+---
+import { renderRichText, storyblokEditable } from "@storyblok/astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
+import type { AboutUsSectionStoryblok } from "../../component-types-sb";
+
+interface Props {
+  blok: AboutUsSectionStoryblok;
+  language: string;
+}
+
+const { blok } = Astro.props;
+
+const renderedRichText = renderRichText(blok.description);
+---
+
+<SectionWrapper {...storyblokEditable(blok)} bgColor={blok.background_color}>
+  <div class="mt-12 flex w-full justify-between max-lg:flex-col">
+    <div class="p-4 pl-0 lg:w-1/2 lg:py-12 lg:pr-12">
+      <div class="mb-12">
+        {
+          !!blok.title && (
+            <h2 class="mb-4 text-lg  font-bold md:text-2xl">{blok.title}</h2>
+          )
+        }
+        {!!blok.description && <div set:html={renderedRichText} class="mb-6" />}
+      </div>
+    </div>
+
+    {
+      !!blok.images && blok.images?.length === 5 && (
+        <div class="w-full lg:my-16 lg:w-1/2 lg:self-stretch">
+          <div class="grid grid-cols-2 grid-rows-3 gap-2">
+            <div class="max-h-64">
+              <img
+                src={blok.images[0]?.filename}
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="max-h-64">
+              <img
+                src={blok.images[1]?.filename}
+                alt=""
+                class="h-full max-h-64 w-full object-cover"
+              />
+            </div>
+            <div class="col-start-2 row-start-3 max-h-64">
+              <img
+                src={blok.images[2]?.filename}
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="col-span-2 col-start-1 row-start-2 max-h-64">
+              <img
+                src={blok.images[3]?.filename}
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class=" col-start-1 row-start-3 max-h-64">
+              <img
+                src={blok.images[4]?.filename}
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</SectionWrapper>

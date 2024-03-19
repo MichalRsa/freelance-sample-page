@@ -1,5 +1,34 @@
 import {StoryblokStory} from 'storyblok-generate-ts'
 
+export interface RichtextStoryblok {
+  type: string;
+  content?: RichtextStoryblok[];
+  marks?: RichtextStoryblok[];
+  attrs?: any;
+  text?: string;
+  [k: string]: any;
+}
+
+export type MultiassetStoryblok = {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+  [k: string]: any;
+}[];
+
+export interface AboutUsSectionStoryblok {
+  title?: string;
+  description?: RichtextStoryblok;
+  images?: MultiassetStoryblok;
+  background_color?: "" | "primary" | "secondary";
+  _uid: string;
+  component: "about_us_section";
+  [k: string]: any;
+}
+
 export interface AllArticlesStoryblok {
   title?: string;
   _uid: string;
@@ -22,15 +51,6 @@ export interface AssetStoryblok {
     [k: string]: any;
   };
   is_external_url?: boolean;
-  [k: string]: any;
-}
-
-export interface RichtextStoryblok {
-  type: string;
-  content?: RichtextStoryblok[];
-  marks?: RichtextStoryblok[];
-  attrs?: any;
-  text?: string;
   [k: string]: any;
 }
 
@@ -102,6 +122,7 @@ export interface FeatureStoryblok {
 
 export interface GridStoryblok {
   columns?: (
+    | AboutUsSectionStoryblok
     | AllArticlesStoryblok
     | ArticleStoryblok
     | ConfigStoryblok
@@ -216,16 +237,6 @@ export interface LinkButtonStoryblok {
   [k: string]: any;
 }
 
-export type MultiassetStoryblok = {
-  alt?: string;
-  copyright?: string;
-  id: number;
-  filename: string;
-  name: string;
-  title?: string;
-  [k: string]: any;
-}[];
-
 export interface MainFooterStoryblok {
   socials?: MultiassetStoryblok;
   phone_number?: string;
@@ -305,6 +316,7 @@ export interface MenuTeaserSectionStoryblok {
 
 export interface PageStoryblok {
   body?: (
+    | AboutUsSectionStoryblok
     | ContactSectionStoryblok
     | FaqSectionStoryblok
     | GridStoryblok

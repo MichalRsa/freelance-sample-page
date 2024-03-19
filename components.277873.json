@@ -1,6 +1,64 @@
 {
   "components": [
     {
+      "name": "about_us_section",
+      "display_name": null,
+      "created_at": "2024-03-19T15:25:40.744Z",
+      "updated_at": "2024-03-19T15:34:28.013Z",
+      "id": 5523844,
+      "schema": {
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "richtext"
+        },
+        "images": {
+          "type": "multiasset",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "tab-bda5ec81-fda0-4e29-a214-a88ea7a348bd": {
+          "display_name": "styles",
+          "keys": [
+            "background_color"
+          ],
+          "pos": 0,
+          "type": "tab"
+        },
+        "background_color": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "3ffb5780-f7f2-4db0-bbc2-0e5978fee9f6",
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "_uid": "fcbe5741-42ab-4a99-9443-0dbca02bd978",
+              "value": "secondary",
+              "name": "Secondary"
+            }
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "about_us_section",
+      "component_group_uuid": "8bfd1ee3-1073-4e4b-b8c5-e498a7992988",
+      "color": null,
+      "icon": null,
+      "content_type_asset_preview": null,
+      "component_group_name": "Sections"
+    },
+    {
       "name": "all-articles",
       "display_name": null,
       "created_at": "2024-02-28T10:02:20.701Z",
@@ -902,7 +960,7 @@
       "name": "page",
       "display_name": null,
       "created_at": "2024-02-28T10:02:20.873Z",
-      "updated_at": "2024-03-19T05:15:44.661Z",
+      "updated_at": "2024-03-19T15:23:14.207Z",
       "id": 5409035,
       "schema": {
         "body": {
@@ -912,7 +970,8 @@
           "component_whitelist": [],
           "component_group_whitelist": [
             "8bfd1ee3-1073-4e4b-b8c5-e498a7992988"
-          ]
+          ],
+          "required": false
         },
         "tab-b8b32b3a-49d2-4061-ab2e-c1f4dfe50272": {
           "display_name": "SEO",
