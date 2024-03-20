@@ -1,27 +1,27 @@
 ---
-import { getTransLink } from '../utils/langs'
-const { language, article } = Astro.props
+import { getTransLink } from "../utils/langs";
+const { language, article } = Astro.props;
 ---
- 
-<article class="column feature bg-gray-100 rounded">
+
+<article class="column flex h-full flex-col bg-secondary-300 shadow-main">
   <img
-    class="object-cover object-center w-full lg:h-48 md:h-36 rounded"
+    class="h-48 w-full rounded object-cover object-center"
     src={`${article.image.filename}/m/360x240`}
     alt={article.image.alt}
   />
-  <div class="p-4">
-    <h1 class="text-2xl font-semibold lg:text-3xl">
+  <div class="flex grow flex-col p-4">
+    <h2 class="text-lg font-semibold lg:text-xl">
       {article.title}
-    </h1>
-    <p class="leading-relaxed text-gray-700 line-clamp-2 my-4">
+    </h2>
+    <p class="text-gray-700 my-4 line-clamp-2 grow leading-relaxed">
       {article.teaser}
     </p>
-  <a
-    href={getTransLink(language, `/blog/${article.slug}`)}
-    class="font-semibold text-blue-600 hover:underline"
-    title="read more"
-  >
-    Read More »
-  </a>
+    <a
+      href={getTransLink(language, `/events/${article.slug}`)}
+      class="text-blue-600 block w-fit bg-ternary-300 px-8 py-2 font-lora font-semibold shadow-main hover:bg-ternary-200"
+      title="read more"
+    >
+      Read
+    </a>
   </div>
 </article>

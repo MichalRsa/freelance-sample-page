@@ -1,47 +1,47 @@
 ---
-import { storyblokEditable, useStoryblokApi } from '@storyblok/astro'
-import ArticleCard from '../components/ArticleCard.astro'
-import isPreview from '../utils/isPreview'
-const { blok, language } = Astro.props
-const storyblokApi = useStoryblokApi()
+import { storyblokEditable, useStoryblokApi } from "@storyblok/astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import isPreview from "../utils/isPreview";
+import SectionWrapper from "../components/SectionWrapper.astro";
+const { blok, language } = Astro.props;
+const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get(`cdn/stories`, {
-  version: isPreview() ? 'draft' : 'published',
-  starts_with: 'blog/',
-  is_startpage: false,
+  version: isPreview() ? "draft" : "published",
+  starts_with: "events/",
+  content_type: "article",
   language,
-})
+});
 
 interface IArticle {
-  slug: string
+  slug: string;
   content: {
-    title: string
-    intro: string
-    slug: string
+    title: string;
+    intro: string;
+    slug: string;
     image: {
-      filename: string
-      alt: string
-    }
-  }
+      filename: string;
+      alt: string;
+    };
+  };
 }
 
-const articles: IArticle[] = data.stories
+const articles: IArticle[] = data.stories;
 ---
 
-<section class="mx-6 my-12" {...storyblokEditable(blok)}>
-  <h1 class="text-6xl text-[#50b0ae] font-bold text-center mb-12">
-    {blok.title}
-  </h1>
-  <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<SectionWrapper bgColor="secondary" {...storyblokEditable(blok)}>
+  <ul
+    class="m-auto grid max-w-3xl grid-cols-1 justify-items-center gap-6 lg:grid-cols-2"
+  >
     {
       articles?.length &&
         articles.map((article) => {
-          article.content.slug = article.slug
+          article.content.slug = article.slug;
           return (
-            <li>
+            <li class="w-full max-lg:max-w-80 lg:w-80">
               <ArticleCard language={language} article={article.content} />
             </li>
-          )
+          );
         })
     }
   </ul>
-</section>
+</SectionWrapper>

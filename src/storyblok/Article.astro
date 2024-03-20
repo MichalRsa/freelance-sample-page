@@ -1,23 +1,26 @@
 ---
-import { storyblokEditable, renderRichText } from '@storyblok/astro'
- 
-const { blok } = Astro.props
-const renderedRichText = renderRichText(blok.content)
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
+
+const { blok } = Astro.props;
+const renderedRichText = renderRichText(blok.content);
 ---
- 
+
 <article {...storyblokEditable(blok)}>
-  <img
-    class="w-full h-[360px] lg:h-[450px] object-cover"
-    alt={blok.image.alt}
-    src={`${blok.image.filename}/m/1600x0`}
-  />
-  <div class="container mx-auto mb-12">
-    <h1 class="text-6xl text-[#50b0ae] font-bold mt-12 mb-4">
-      {blok.title}
-    </h1>
-    <h2 class="text-2xl text-[#1d243d] font-bold mb-4">
-      {blok.subtitle}
-    </h2>
-    <div class="prose" set:html={renderedRichText} />
-  </div>
+  <SectionWrapper bgColor="secondary">
+    <img
+      class="h-[460px] w-full object-cover lg:h-[650px] lg:px-24 lg:pt-24"
+      alt={blok.image.alt}
+      src={`${blok.image.filename}/m/1600x0`}
+    />
+    <div class="container mx-auto mb-12">
+      <h1 class="mb-4 mt-12">
+        {blok.title}
+      </h1>
+      <h2 class="mb-4 text-2xl font-bold text-[#1d243d]">
+        {blok.subtitle}
+      </h2>
+      <div class="prose" set:html={renderedRichText} />
+    </div>
+  </SectionWrapper>
 </article>
