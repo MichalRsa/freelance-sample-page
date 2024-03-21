@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  bgColor?: "" | "primary" | "secondary";
+  bgColor?: "" | "primary" | "secondary" | "ternary";
 }
 
 const { bgColor } = Astro.props;
@@ -8,6 +8,7 @@ const { bgColor } = Astro.props;
 const bgColorClasses = {
   primary: "bg-primary-100",
   secondary: "bg-ternary-300",
+  ternary: "bg-secondary-500",
 };
 
 const bgClass = bgColor ? bgColorClasses[bgColor] : "";
