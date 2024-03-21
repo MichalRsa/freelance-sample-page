@@ -23,7 +23,7 @@ export interface AboutUsSectionStoryblok {
   title?: string;
   description?: RichtextStoryblok;
   images?: MultiassetStoryblok;
-  background_color?: "" | "primary" | "secondary";
+  background_color?: "" | "primary" | "secondary" | "ternary";
   _uid: string;
   component: "about_us_section";
   [k: string]: any;
@@ -133,6 +133,7 @@ export interface GridStoryblok {
     | FeatureStoryblok
     | GridStoryblok
     | HeroStoryblok
+    | HeroWithLinksStoryblok
     | LinkStoryblok
     | LinkButtonStoryblok
     | MainFooterStoryblok
@@ -140,7 +141,6 @@ export interface GridStoryblok {
     | MapSectionStoryblok
     | MenuCardStoryblok
     | MenuCardsStoryblok
-    | MenuHeroStoryblok
     | MenuRowStoryblok
     | MenuTeaserCardStoryblok
     | MenuTeaserSectionStoryblok
@@ -163,6 +163,14 @@ export interface HeroStoryblok {
   cta?: LinkButtonStoryblok[];
   _uid: string;
   component: "hero";
+  [k: string]: any;
+}
+
+export interface HeroWithLinksStoryblok {
+  title: string;
+  links?: LinkStoryblok[];
+  _uid: string;
+  component: "hero_with_links";
   [k: string]: any;
 }
 
@@ -280,14 +288,6 @@ export interface MenuCardsStoryblok {
   [k: string]: any;
 }
 
-export interface MenuHeroStoryblok {
-  title: string;
-  links?: LinkStoryblok[];
-  _uid: string;
-  component: "menu_hero";
-  [k: string]: any;
-}
-
 export interface MenuRowStoryblok {
   item?: string;
   price?: string;
@@ -317,13 +317,14 @@ export interface MenuTeaserSectionStoryblok {
 export interface PageStoryblok {
   body?: (
     | AboutUsSectionStoryblok
+    | AllArticlesStoryblok
     | ContactSectionStoryblok
     | FaqSectionStoryblok
     | GridStoryblok
     | HeroStoryblok
+    | HeroWithLinksStoryblok
     | MapSectionStoryblok
     | MenuCardsStoryblok
-    | MenuHeroStoryblok
     | MenuTeaserSectionStoryblok
     | RatingStoryblok
     | ReviewsStoryblok

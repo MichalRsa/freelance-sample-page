@@ -1,17 +1,17 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
-import type { MenuHeroStoryblok } from "../../component-types-sb";
+import type { HeroWithLinksStoryblok } from "../../component-types-sb";
 
 interface Props {
-  blok: MenuHeroStoryblok;
+  blok: HeroWithLinksStoryblok;
   language: string;
 }
 
 const { blok, language } = Astro.props;
 ---
 
-<div {...storyblokEditable(blok)} class="bg-secondary-500 px-8 py-20 md:px-20">
+<div {...storyblokEditable(blok)} class="bg-secondary-500 px-8 pt-20 md:px-20">
   <div
     class="from-black/70 via-black/50 to-transparent z-10 bg-gradient-to-t py-6"
   >

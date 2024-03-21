@@ -36,7 +36,7 @@ export default defineConfig({
         faq_section: "storyblok/FaqSection",
         faq_card: "storyblok/FaqCard",
         link: "storyblok/Link",
-        menu_hero: "storyblok/MenuHero",
+        hero_with_links: "storyblok/HeroWithLinks",
         menu_cards: "storyblok/MenuCards",
         menu_card: "storyblok/MenuCard",
         link_button: "storyblok/LinkButton",
