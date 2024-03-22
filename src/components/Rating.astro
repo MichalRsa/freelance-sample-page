@@ -1,0 +1,29 @@
+---
+interface Props {
+  rating: string;
+  size: number;
+}
+const { rating: _rating, size } = Astro.props;
+
+const rating = Number(_rating);
+
+const starType = {
+  full: "star_filled.png",
+  half: "star_half_empty.png",
+  empty: "star_empty.png",
+};
+
+const starArray: ("full" | "half" | "empty")[] = [];
+
+for (let i = 1; i <= 5; i++) {
+  if (i <= rating) starArray.push("full");
+  else if (i - 0.5 <= rating) starArray.push("half");
+  else starArray.push("empty");
+}
+---
+
+{
+  starArray.map((star) => (
+    <img src={`/${starType[star]}`} width={size} height={size} alt="" />
+  ))
+}

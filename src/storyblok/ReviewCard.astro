@@ -1,4 +1,5 @@
 ---
+import RatingComponent from "../components/Rating.astro";
 import { storyblokEditable } from "@storyblok/astro";
 import type { ReviewCardStoryblok } from "../../component-types-sb";
 import { Image } from "astro:assets";
@@ -31,7 +32,7 @@ const { blok } = Astro.props;
         {blok.role}
       </p>
       <p class="flex grow items-center">
-        {blok.rating}
+        <RatingComponent rating={blok.rating} size={20} />
       </p>
     </div>
   </div>
