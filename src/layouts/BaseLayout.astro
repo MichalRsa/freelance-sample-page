@@ -17,13 +17,14 @@ const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: isPreview() ? "draft" : "published",
   resolve_links: "url",
+  language,
 });
 
 const header = data.story.content.header[0] as MainHeaderStoryblok;
 const footer = data.story.content.footer[0] as MainFooterStoryblok;
 ---
 
-<html lang="en">
+<html lang={language}>
   <head>
     <BaseHead title={title} description={description} />
   </head>
