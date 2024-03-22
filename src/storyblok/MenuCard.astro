@@ -10,7 +10,7 @@ const { blok } = Astro.props;
 
 <div
   id=`${blok.title.toLowerCase()}`
-  class="relative mx-4 my-12 w-[520px] bg-ternary-500 p-12 font-lora shadow-main"
+  class="relative md:mx-4 my-12 w-52 md:w-[520px] bg-ternary-500 p-6 md:p-12 font-lora shadow-main"
 >
   <h3
     class="t-0 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-ternary-500 px-6 text-center"
@@ -23,7 +23,7 @@ const { blok } = Astro.props;
       {
         blok.menu.map((menuItem) => (
           <li>
-            <p class="m-8 flex justify-between border-b text-lg">
+            <p class="m-2 my-4 md:m-8 flex justify-between border-b md:text-lg">
               <span>{menuItem.item}</span>
               <span>{menuItem.price}</span>
             </p>
