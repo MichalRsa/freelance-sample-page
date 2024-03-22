@@ -2,6 +2,7 @@
 import { renderRichText, storyblokEditable } from "@storyblok/astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import type { AboutUsSectionStoryblok } from "../../component-types-sb";
+import { Image } from "astro:assets";
 
 interface Props {
   blok: AboutUsSectionStoryblok;
@@ -31,39 +32,49 @@ const renderedRichText = renderRichText(blok.description);
         <div class="w-full lg:my-16 lg:w-1/2 lg:self-stretch">
           <div class="grid grid-cols-2 grid-rows-3 gap-2">
             <div class="max-h-64">
-              <img
-                src={`${blok.images[0]?.filename}/m/`}
+              <Image
+                src={`${blok.images[0]?.filename}`}
                 alt=""
                 class="h-full w-full object-cover"
+                width={400}
+                height={400}
               />
             </div>
             <div class="max-h-64">
-              <img
-                src={`${blok.images[1]?.filename}/m/`}
+              <Image
+                src={`${blok.images[1]?.filename}`}
                 alt=""
                 class="h-full max-h-64 w-full object-cover"
+                width={400}
+                height={400}
               />
             </div>
             <div class="col-start-2 row-start-3 max-h-64">
-              <img
-                src={`${blok.images[2]?.filename}/m/`}
+              <Image
+                src={`${blok.images[2]?.filename}`}
                 alt=""
                 alt=""
                 class="h-full w-full object-cover"
+                width={1300}
+                height={400}
               />
             </div>
             <div class="col-span-2 col-start-1 row-start-2 max-h-64">
-              <img
-                src={`${blok.images[3]?.filename}/m/`}
+              <Image
+                src={`${blok.images[3]?.filename}`}
                 alt=""
                 class="h-full w-full object-cover"
+                width={400}
+                height={400}
               />
             </div>
             <div class=" col-start-1 row-start-3 max-h-64">
-              <img
-                src={`${blok.images[4]?.filename}/m/`}
+              <Image
+                src={`${blok.images[4]?.filename}`}
                 alt=""
                 class="h-full w-full object-cover"
+                width={400}
+                height={400}
               />
             </div>
           </div>
