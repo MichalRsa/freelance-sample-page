@@ -43,7 +43,7 @@ const lang = language === "en" ? "pl" : "en";
         {
           !!menu?.length &&
             menu.map((menuItem) => (
-              <li class="max-xl:m-4">
+              <li class="max-xl:m-4 text-nowrap">
                 <StoryblokComponent blok={menuItem} language={language} />
               </li>
             ))
