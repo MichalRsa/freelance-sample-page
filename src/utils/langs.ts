@@ -1,5 +1,5 @@
 // You can have the languages in an utils file so it can be reused.
-const languages = ["en", "es"];
+const languages = ["en", "pl"];
 function getTransLink(language: string, slug: string): string {
   return language === "en" ? slug : `/${language}${slug}`;
 }
