@@ -3,6 +3,7 @@ import { storyblokEditable } from "@storyblok/astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import LinkButton from "./LinkButton.astro";
 import type { HeroStoryblok } from "../../component-types-sb";
+import { Image } from "astro:assets";
 
 interface Props {
   blok: HeroStoryblok;
@@ -16,7 +17,7 @@ const { blok, language } = Astro.props;
   {...storyblokEditable(blok)}
   class="to-transparent relative flex overflow-hidden bg-gradient-to-r from-text-900/40 via-text-900/50 md:h-screen md:pt-24"
 >
-  <img
+  <Image
     src={`${blok.background_image.filename}/m/`}
     alt={blok.background_image?.alt || ""}
     class="absolute left-0 top-0 -z-50 h-full w-full object-cover max-md:scale-x-[-1]"

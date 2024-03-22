@@ -1,6 +1,7 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import type { ReviewCardStoryblok } from "../../component-types-sb";
+import { Image } from "astro:assets";
 
 interface Props {
   blok: ReviewCardStoryblok;
@@ -15,7 +16,7 @@ const { blok } = Astro.props;
 >
   <div class="flex pb-8 md:pb-16">
     <div class="shadow-main shadow-text-500 max-md:w-1/2">
-      <img
+      <Image
         src={`${blok.image.filename}/m/filters:quality(60)`}
         alt=""
         width={150}
