@@ -15,13 +15,13 @@ const { blok, language } = Astro.props;
   <div
     class="from-black/70 via-black/50 to-transparent z-10 bg-gradient-to-t py-6"
   >
-    <h1 class="mb-10 text-center text-2xl md:text-5xl font-bold text-text-500">
+    <h1 class="mb-10 text-center text-2xl font-bold text-text-500 md:text-5xl">
       {blok.title}
     </h1>
     {
       !!blok.links && (
         <div class="mx-auto max-w-96">
-          <div class="flex justify-around">
+          <div class="flex justify-around gap-8">
             {blok.links.map((blok) => (
               <StoryblokComponent
                 blok={{
