@@ -18,10 +18,11 @@ const { blok, language } = Astro.props;
   class="to-transparent relative flex overflow-hidden bg-gradient-to-r from-text-900/40 via-text-900/50 md:h-screen md:pt-24"
 >
   <Image
-    src={blok.background_image.filename}
+    src={`${blok.background_image.filename}/m/`}
     alt={blok.background_image?.alt || ""}
     class="absolute left-0 top-0 -z-50 h-full w-full object-cover max-md:scale-x-[-1]"
-    width={1}
+    width={5}
+    loading="eager"
     height={1}
   />
   <SectionWrapper>

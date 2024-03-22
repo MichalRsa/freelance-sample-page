@@ -16,7 +16,7 @@ const { blok } = Astro.props;
   class="sm:first:-translate-y-12 sm:last:translate-y-12"
 >
   <div class="shadow-main shadow-text-500">
-    <Image src={blok.image.filename} alt="" height={370} width={370} />
+    <Image src={`${blok.image.filename}/m/filters:quality(80)`} alt="" height={370} width={370} />
   </div>
   <div class="flex items-center pt-4">
     <div class="p-1 max-md:w-6 md:pr-4">

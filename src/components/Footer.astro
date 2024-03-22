@@ -24,7 +24,12 @@ const { footer_menu, socials, phone_number, opening_hours } = blok;
         <div class="flex flex-shrink justify-around">
           {socials.map((social) => (
             <a href="/">
-              <Image src={social.filename} alt="" width={80} height={80} />
+              <Image
+                src={`${social.filename}/m/filters:quality(10)`}
+                alt=""
+                width={80}
+                height={80}
+              />
             </a>
           ))}
         </div>

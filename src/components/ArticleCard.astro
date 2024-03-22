@@ -1,12 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import { getTransLink } from "../utils/langs";
 const { language, article } = Astro.props;
 ---
 
 <article class="column flex h-full flex-col bg-secondary-300 shadow-main">
-  <img
+  <Image
     class="h-48 w-full rounded object-cover object-center"
-    src={`${article.image.filename}/m/360x240`}
+    src={`${article.image.filename}/m/filters:quality(30)`}
+    width={400}
+    height={240}
     alt={article.image.alt}
   />
   <div class="flex grow flex-col p-4">
