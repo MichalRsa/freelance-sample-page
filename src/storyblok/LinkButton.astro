@@ -1,20 +1,19 @@
 ---
 import type { LinkButtonStoryblok } from "../../component-types-sb";
-import { getTransLink } from "../utils/langs";
 
 export interface Props {
   blok: LinkButtonStoryblok;
   language: string;
 }
 
-const { blok, language } = Astro.props;
+const { blok } = Astro.props;
 
 const isExternal = !!blok.link.url;
 
 const anchor = !!blok.link.anchor ? `#${blok.link.anchor}` : "";
 const url = isExternal
   ? blok.link.url
-  : getTransLink(language, `/${blok.link.story?.slug}${anchor}`);
+  : `/${blok.link.story.full_slug}${anchor}`;
 
 const styles = {
   font: {
