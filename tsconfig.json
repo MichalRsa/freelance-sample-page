@@ -8,7 +8,12 @@
       {
         "name": "@astrojs/ts-plugin"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@images/*": ["src/images/*"]
+  }
   },
-  "exclude": ["component-types-sb.d.ts"]
+  "exclude": ["component-types-sb.d.ts"],
 }

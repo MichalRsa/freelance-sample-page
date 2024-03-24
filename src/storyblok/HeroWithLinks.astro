@@ -2,6 +2,10 @@
 import { storyblokEditable } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import type { HeroWithLinksStoryblok } from "../../component-types-sb";
+import { Image } from "astro:assets";
+import Stain1 from "@images/stain1.svg";
+// import Stain1 from "../images/stain1.svg";
+import Stain2 from "@images/stain2.svg";
 
 interface Props {
   blok: HeroWithLinksStoryblok;
@@ -11,10 +15,13 @@ interface Props {
 const { blok, language } = Astro.props;
 ---
 
-<div {...storyblokEditable(blok)} class="bg-secondary-500 px-8 pt-20 md:px-20">
-  <div
-    class="from-black/70 via-black/50 to-transparent z-10 bg-gradient-to-t py-6"
-  >
+<div
+  {...storyblokEditable(blok)}
+  class="relative bg-secondary-500 px-8 pt-20 md:px-20"
+>
+  <Image src={Stain1} alt="" class="z-10 absolute right-0 md:-right-20 -top-8 md:top-0 h-[470px] max-md:w-32" />
+  <Image src={Stain2} alt="" class="z-10 absolute left-[8%] top-[30%] w-32 md:w-96" />
+  <div class="relative z-20 py-6 md:py-16">
     <h1 class="mb-10 text-center text-2xl font-bold text-text-500 md:text-5xl">
       {blok.title}
     </h1>

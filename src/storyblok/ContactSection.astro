@@ -3,6 +3,8 @@ import { renderRichText, storyblokEditable } from "@storyblok/astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import LinkButton from "./LinkButton.astro";
 import type { ContactSectionStoryblok } from "../../component-types-sb";
+import Arrow from "@images/arrow.svg";
+import { Image } from "astro:assets";
 
 interface Props {
   blok: ContactSectionStoryblok;
@@ -15,7 +17,7 @@ const renderedRichText = renderRichText(blok.description);
 ---
 
 <SectionWrapper {...storyblokEditable(blok)} bgColor={blok.background_color}>
-  <div class="mt-12 flex w-full justify-between max-lg:flex-col">
+  <div class="relative mt-12 flex w-full justify-between max-lg:flex-col">
     <div class="p-4 pl-0 lg:w-1/2 lg:max-w-96 lg:py-12 lg:pr-12">
       <div class="mb-12">
         {
@@ -25,12 +27,19 @@ const renderedRichText = renderRichText(blok.description);
         }
         {!!blok.address && <p class="mb-8 font-bold">{blok.address}</p>}
         {!!blok.description && <div set:html={renderedRichText} class="mb-6" />}
-        {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}
+        <div class="z-[1] relative w-fit">
+          {
+            blok.cta?.[0] && (
+              <LinkButton language={language} blok={blok.cta[0]} />
+            )
+          }
+          <Image src={Arrow} alt="" class="max-[540px]:right-[-140px] max-md:rotate-[24deg] right-[-200px] md:right-[-300px] top-[80%] md:top-[-12%] absolute"/>
+        </div>
       </div>
 
       {
         !!blok.opening_hours?.length && (
-          <div class="mb-12">
+          <div class="relative z-10 mb-12">
             <h2 class="mb-4 text-lg font-bold md:text-2xl">Opening Hours</h2>
             {
               <ul class=" lg:w-64">
@@ -65,7 +74,7 @@ const renderedRichText = renderRichText(blok.description);
       </div>
     </div>
     <div
-      class="w-full bg-text-300 max-lg:h-64 lg:my-16 lg:w-1/2 lg:self-stretch"
+      class="z-10 w-full bg-text-300 max-lg:h-64 lg:my-16 lg:w-1/2 lg:self-stretch"
     >
     </div>
   </div>
