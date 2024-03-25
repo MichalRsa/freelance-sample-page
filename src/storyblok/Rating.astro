@@ -23,7 +23,7 @@ const { blok, language } = Astro.props;
     <p class="text-center font-lora text-xl font-medium md:text-5xl">
       {blok.rating}
     </p>
-    <div class="flex justify-center pb-4">
+    <div class="flex justify-center pb-4 max-w-full">
       <RatingComponent rating={blok.rating} size={80} />
     </div>
     <div class="flex justify-center">
