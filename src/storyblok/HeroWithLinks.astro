@@ -19,9 +19,17 @@ const { blok, language } = Astro.props;
   {...storyblokEditable(blok)}
   class="relative bg-secondary-500 px-8 pt-20 md:px-20"
 >
-  <Image src={Stain1} alt="" class="z-10 absolute right-0 md:-right-20 -top-8 md:top-0 h-[470px] max-md:w-32" />
-  <Image src={Stain2} alt="" class="z-10 absolute left-[8%] top-[30%] w-32 md:w-96" />
-  <div class="relative z-20 py-6 md:py-16">
+  <Image
+    src={Stain1}
+    alt=""
+    class="absolute -top-8 right-0 z-10 h-[470px] max-md:w-32 md:-right-20 md:top-0"
+  />
+  <Image
+    src={Stain2}
+    alt=""
+    class="absolute left-[8%] top-[30%] z-10 w-32 md:w-96"
+  />
+  <div class:list={["animationHidden", "relative z-20 py-6 md:py-16"]}>
     <h1 class="mb-10 text-center text-2xl font-bold text-text-500 md:text-5xl">
       {blok.title}
     </h1>

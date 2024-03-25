@@ -1,9 +1,10 @@
 ---
 export interface Props {
   bgColor?: "" | "primary" | "secondary" | "ternary";
+  animation?: string;
 }
 
-const { bgColor } = Astro.props;
+const { bgColor, animation } = Astro.props;
 
 const bgColorClasses = {
   primary: "bg-primary-100",
@@ -15,7 +16,7 @@ const bgClass = bgColor ? bgColorClasses[bgColor] : "";
 ---
 
 <section class:list={[bgClass, "overflow-hidden px-4 py-8 md:p-12"]}>
-  <div class="mx-auto max-w-5xl">
+  <div class:list={[animation, "mx-auto max-w-5xl"]}>
     <slot />
   </div>
 </section>

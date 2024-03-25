@@ -15,7 +15,10 @@ const { blok, language } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
-  <SectionWrapper bgColor={blok.background_color}>
+  <SectionWrapper
+    bgColor={blok.background_color}
+    animation="animationHidden animationBottom"
+  >
     <SectionTitle title={blok.title} classes="text-center" />
     <p class="text-center font-lora text-xl font-medium md:text-5xl">
       {blok.rating}

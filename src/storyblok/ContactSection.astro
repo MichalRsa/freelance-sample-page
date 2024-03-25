@@ -16,7 +16,7 @@ const { blok, language } = Astro.props;
 const renderedRichText = renderRichText(blok.description);
 ---
 
-<SectionWrapper {...storyblokEditable(blok)} bgColor={blok.background_color}>
+<SectionWrapper {...storyblokEditable(blok)} bgColor={blok.background_color} animation="animationHidden">
   <div class="relative mt-12 flex w-full justify-between max-lg:flex-col">
     <div class="p-4 pl-0 lg:w-1/2 lg:max-w-96 lg:py-12 lg:pr-12">
       <div class="mb-12">

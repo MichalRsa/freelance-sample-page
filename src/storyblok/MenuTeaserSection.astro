@@ -14,7 +14,7 @@ const { blok, language } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
-  <SectionWrapper bgColor={blok.background_color}>
+  <SectionWrapper bgColor={blok.background_color} animation="animationHidden animationBottom">
     {!!blok.title && <SectionTitle title={blok.title} />}
     <div
       class="flex flex-col items-center justify-between gap-4 max-sm:pb-4 sm:flex-row sm:items-stretch sm:gap-11 sm:py-12"

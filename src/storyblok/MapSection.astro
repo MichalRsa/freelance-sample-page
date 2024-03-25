@@ -16,7 +16,7 @@ const renderedRichText = renderRichText(blok.description);
 ---
 
 <div {...storyblokEditable(blok)}>
-  <SectionWrapper bgColor={blok.background_color}>
+  <SectionWrapper bgColor={blok.background_color} animation="animationHidden animationBottom">
     <SectionTitle title={blok.title} />
     <div
       class="m-auto flex w-full max-w-4xl justify-between bg-secondary-500 shadow-main shadow-text-500 max-md:flex-col-reverse"

@@ -13,7 +13,7 @@ const { blok } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
-  <SectionWrapper bgColor={blok.background_color}>
+  <SectionWrapper bgColor={blok.background_color} animation="animationHidden animationBottom">
     <SectionTitle title={blok.title} />
     <div
       class="flex justify-between gap-4 overflow-x-auto py-12 max-xl:-mx-12 max-md:-mx-4 max-md:pl-2 xl:gap-8"

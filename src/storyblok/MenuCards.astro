@@ -11,7 +11,7 @@ const { blok } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
-  <SectionWrapper bgColor="ternary">
+  <SectionWrapper bgColor="ternary" animation="animationHidden animationBottom">
     <div class="flex flex-wrap justify-around">
       {blok.menu.map((menuItem) => <StoryblokComponent blok={menuItem} />)}
     </div>
