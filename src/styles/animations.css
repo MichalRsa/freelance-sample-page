@@ -1,0 +1,23 @@
+.animationHidden {
+  @apply opacity-0;
+  @apply blur;
+  @apply transition-all duration-[1500ms];
+}
+
+.animationLeft {
+  @apply -translate-x-20;
+}
+
+.animationRight {
+  @apply translate-x-20;
+}
+
+.animationBottom {
+  @apply translate-y-20;
+}
+
+.show {
+  @apply opacity-100;
+  @apply blur-none;
+  @apply translate-x-0 translate-y-0;
+}
