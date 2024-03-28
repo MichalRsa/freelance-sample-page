@@ -18,9 +18,9 @@ const lang = language === "en" ? "pl" : "en";
 ---
 
 <header class="absolute z-50 w-full xl:bg-primary-700 xl:px-12 xl:py-4">
-  <div class="flex h-full items-center justify-between max-xl:flex-col">
+  <div class="relative flex h-full items-center justify-between max-xl:flex-col">
     <div
-      class="flex w-full justify-between bg-primary-700 max-xl:px-4 max-xl:py-1"
+      class="relative z-50 flex w-full justify-between bg-primary-700 max-xl:px-4 max-xl:py-1"
     >
       <a href={getTransLink(language, "/")}>
         <h1 class="text-2xl text-secondary-100">
@@ -35,7 +35,7 @@ const lang = language === "en" ? "pl" : "en";
     <nav
       data-id="nav"
       data-visible="false"
-      class="backdrop-blur-sm max-xl:w-full max-xl:bg-primary-600/80 max-xl:data-[visible=false]:hidden"
+      class="backdrop-blur-sm z-40 max-xl:w-full max-xl:bg-primary-600/80 max-xl:absolute max-xl:bottom-0 max-xl:data-[visible=true]:translate-y-[99%] transition-transform duration-500"
     >
       <ul
         class="flex items-center text-base font-bold max-xl:flex-col xl:space-x-8"
