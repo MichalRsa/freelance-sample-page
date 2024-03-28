@@ -73,7 +73,14 @@ export default {
         main: "12px 12px 1px 0",
         "main-hover": "-12px -12px 1px 0",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.text.700"),
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

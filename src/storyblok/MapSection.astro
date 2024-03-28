@@ -25,7 +25,7 @@ const renderedRichText = renderRichText(blok.description);
         {!!blok.address && <p class="mb-8 font-bold">{blok.address}</p>}
         {
           !!blok.description && (
-            <div set:html={renderedRichText} class="mb-10" />
+            <div set:html={renderedRichText} class="prose mb-10" />
           )
         }
         {blok.cta?.[0] && <LinkButton language={language} blok={blok.cta[0]} />}

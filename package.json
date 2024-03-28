@@ -30,6 +30,7 @@
     "vite": "^5.0.12"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.12",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vitejs/plugin-basic-ssl": "^1.1.0",

@@ -27,7 +27,7 @@ const renderedRichText = renderRichText(blok.description);
             <h2 class="mb-4 text-lg  font-bold md:text-2xl">{blok.title}</h2>
           )
         }
-        {!!blok.description && <div set:html={renderedRichText} class="mb-6" />}
+        {!!blok.description && <div set:html={renderedRichText} class="prose mb-6" />}
       </div>
     </div>
 
