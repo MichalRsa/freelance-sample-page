@@ -1,4 +1,5 @@
 ---
+import { storyblokEditable } from "@storyblok/astro";
 import type { FaqSectionStoryblok } from "../../component-types-sb";
 import SectionTitle from "../components/SectionTitle.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
@@ -11,7 +12,11 @@ interface Props {
 const { blok } = Astro.props;
 ---
 
-<SectionWrapper bgColor="primary" animation="animationHidden animationBottom">
+<SectionWrapper
+  {...storyblokEditable(blok)}
+  bgColor="primary"
+  animation="animationHidden animationBottom"
+>
   <SectionTitle title="Frequently Asked Questions" />
 
   <div>

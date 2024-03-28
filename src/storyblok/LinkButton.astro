@@ -1,4 +1,5 @@
 ---
+import { storyblokEditable } from "@storyblok/astro";
 import type { LinkButtonStoryblok } from "../../component-types-sb";
 
 export interface Props {
@@ -31,9 +32,10 @@ const type = !!blok.style ? styles.type[blok.style] : styles.type.primary;
 ---
 
 <a
+  {...storyblokEditable(blok)}
   href={url}
   class:list={[
-    "inline-block px-11 py-3 text-center capitalize text-text-500 shadow-main shadow-text-500 hover:bg-secondary-300 hover:translate-x-[12px] hover:translate-y-[12px] hover:shadow-main-hover max-md:text-md transition-all",
+    "inline-block px-11 py-3 text-center capitalize text-text-500 shadow-main shadow-text-500 transition-all hover:translate-x-[12px] hover:translate-y-[12px] hover:bg-secondary-300 hover:shadow-main-hover max-md:text-md",
     type,
   ]}
 >

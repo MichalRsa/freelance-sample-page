@@ -1,4 +1,5 @@
 ---
+import { storyblokEditable } from "@storyblok/astro";
 import type { FaqCardStoryblok } from "../../component-types-sb";
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 const { blok } = Astro.props;
 ---
 
-<faq-card>
+<faq-card {...storyblokEditable(blok)}>
   <div
     class="animationHidden animationLeft mb-8 bg-secondary-500 p-2 shadow-main shadow-text-500 focus-within:outline-none focus-within:ring focus-within:ring-secondary-700 hover:bg-secondary-200 md:p-4"
   >
