@@ -603,17 +603,21 @@
       "name": "main_footer",
       "display_name": null,
       "created_at": "2024-03-04T09:59:17.360Z",
-      "updated_at": "2024-03-04T11:48:41.605Z",
+      "updated_at": "2024-03-28T20:09:26.230Z",
       "id": 5435642,
       "schema": {
         "socials": {
-          "type": "multiasset",
-          "filetypes": [
-            "images"
+          "type": "bloks",
+          "pos": 0,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "social_icon_link"
           ]
         },
         "phone_number": {
-          "type": "text"
+          "type": "text",
+          "pos": 1
         },
         "footer_menu": {
           "type": "bloks",
@@ -621,7 +625,8 @@
           "restrict_components": true,
           "component_whitelist": [
             "link"
-          ]
+          ],
+          "pos": 2
         },
         "opening_hours": {
           "type": "bloks",
@@ -629,7 +634,8 @@
           "restrict_components": true,
           "component_whitelist": [
             "day_opening_hours"
-          ]
+          ],
+          "pos": 3
         }
       },
       "image": null,
@@ -1259,6 +1265,41 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "component_group_name": "Sections"
+    },
+    {
+      "name": "social_icon_link",
+      "display_name": null,
+      "created_at": "2024-03-28T20:05:47.030Z",
+      "updated_at": "2024-03-28T20:08:30.597Z",
+      "id": 5573756,
+      "schema": {
+        "social_link": {
+          "type": "multilink",
+          "required": true
+        },
+        "social_icon": {
+          "type": "asset",
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "social_icon_link",
+      "component_group_uuid": "bdb54984-3d59-4e30-814a-59a0231079d7",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Components"
     }
   ]
 }

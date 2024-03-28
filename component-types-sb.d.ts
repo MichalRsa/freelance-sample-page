@@ -202,7 +202,7 @@ export interface LinkButtonStoryblok {
 }
 
 export interface MainFooterStoryblok {
-  socials?: MultiassetStoryblok;
+  socials?: SocialIconLinkStoryblok[];
   phone_number?: string;
   footer_menu?: LinkStoryblok[];
   opening_hours?: DayOpeningHoursStoryblok[];
@@ -328,5 +328,13 @@ export interface ReviewsStoryblok {
   background_color: "" | "primary" | "secondary";
   _uid: string;
   component: "reviews";
+  [k: string]: any;
+}
+
+export interface SocialIconLinkStoryblok {
+  social_link: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  social_icon: AssetStoryblok;
+  _uid: string;
+  component: "social_icon_link";
   [k: string]: any;
 }
