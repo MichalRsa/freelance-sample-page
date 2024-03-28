@@ -232,7 +232,7 @@ export interface MapSectionStoryblok {
 export interface MenuCardStoryblok {
   title: string;
   menu: MenuRowStoryblok[];
-  id?: string;
+  id: string;
   _uid: string;
   component: "menu_card";
   [k: string]: any;
