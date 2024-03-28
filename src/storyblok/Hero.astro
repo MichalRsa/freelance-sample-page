@@ -15,7 +15,7 @@ const { blok, language } = Astro.props;
 
 <div
   {...storyblokEditable(blok)}
-  class="to-transparent relative flex overflow-hidden bg-gradient-to-r from-text-900/40 via-text-900/50 md:h-screen md:pt-24"
+  class="to-transparent relative overflow-hidden bg-gradient-to-r from-text-900/40 via-text-900/50 md:h-screen md:pt-24"
 >
   <Image
     src={`${blok.background_image.filename}/m/`}
