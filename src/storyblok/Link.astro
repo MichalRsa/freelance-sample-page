@@ -1,5 +1,4 @@
 ---
-
 export interface Props {
   blok: {
     link: {
@@ -32,8 +31,8 @@ const url = isExternal
 
 const styles = {
   color: {
-    white: "text-secondary-100",
-    black: "text-text-500",
+    white: "text-secondary-100 hover:after:bg-secondary-100",
+    black: "text-text-500 hover:after:bg-text-500",
   },
   font: {
     lora: "font-lora",
@@ -45,7 +44,8 @@ const styles = {
 <a
   href={url}
   class:list={[
-    "capitalize text-secondary-100 hover:underline hover:decoration-2 hover:underline-offset-2 max-md:text-md",
+    "relative capitalize text-secondary-100 duration-[1500ms] after:transition-all max-md:text-md",
+    "after:absolute after:bottom-0 after:left-0 after:block after:h-[1px] after:w-full after:-translate-x-4 after:-translate-y-4 after:opacity-0 hover:after:translate-x-0 hover:after:translate-y-0 hover:after:opacity-100 md:after:h-[3px]",
     styles.color[blok.color || "white"],
     styles.font[blok.font || "rubik"],
     blok.fontSize,

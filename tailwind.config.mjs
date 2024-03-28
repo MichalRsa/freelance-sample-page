@@ -71,6 +71,7 @@ export default {
     extend: {
       boxShadow: {
         main: "12px 12px 1px 0",
+        "main-hover": "-12px -12px 1px 0",
       },
     },
   },
