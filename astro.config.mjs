@@ -20,11 +20,7 @@ export default defineConfig({
       components: {
         config: "storyblok/Config",
         page: "storyblok/Page",
-        feature: "storyblok/Feature",
-        grid: "storyblok/Grid",
         hero: "storyblok/Hero",
-        teaser: "storyblok/Teaser",
-        "popular-articles": "storyblok/PopularArticles",
         "all-articles": "storyblok/AllArticles",
         article: "storyblok/Article",
         reviews: "storyblok/Reviews",
