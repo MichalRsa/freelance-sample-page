@@ -74,7 +74,7 @@ export interface ConfigStoryblok {
 
 export interface ContactSectionStoryblok {
   location?: any;
-  background_color?: "" | "primary" | "secondary";
+  background_color?: "" | "primary" | "secondary" | "ternary";
   title?: string;
   description?: RichtextStoryblok;
   address?: string;
@@ -109,50 +109,6 @@ export interface FaqSectionStoryblok {
   faq_cards: FaqCardStoryblok[];
   _uid: string;
   component: "faq_section";
-  [k: string]: any;
-}
-
-export interface FeatureStoryblok {
-  name?: string;
-  image?: AssetStoryblok;
-  _uid: string;
-  component: "feature";
-  [k: string]: any;
-}
-
-export interface GridStoryblok {
-  columns?: (
-    | AboutUsSectionStoryblok
-    | AllArticlesStoryblok
-    | ArticleStoryblok
-    | ConfigStoryblok
-    | ContactSectionStoryblok
-    | DayOpeningHoursStoryblok
-    | FaqCardStoryblok
-    | FaqSectionStoryblok
-    | FeatureStoryblok
-    | GridStoryblok
-    | HeroStoryblok
-    | HeroWithLinksStoryblok
-    | LinkStoryblok
-    | LinkButtonStoryblok
-    | MainFooterStoryblok
-    | MainHeaderStoryblok
-    | MapSectionStoryblok
-    | MenuCardStoryblok
-    | MenuCardsStoryblok
-    | MenuRowStoryblok
-    | MenuTeaserCardStoryblok
-    | MenuTeaserSectionStoryblok
-    | PageStoryblok
-    | PopularArticlesStoryblok
-    | RatingStoryblok
-    | ReviewCardStoryblok
-    | ReviewsStoryblok
-    | TeaserStoryblok
-  )[];
-  _uid: string;
-  component: "grid";
   [k: string]: any;
 }
 
@@ -276,6 +232,7 @@ export interface MapSectionStoryblok {
 export interface MenuCardStoryblok {
   title: string;
   menu: MenuRowStoryblok[];
+  id?: string;
   _uid: string;
   component: "menu_card";
   [k: string]: any;
@@ -320,7 +277,6 @@ export interface PageStoryblok {
     | AllArticlesStoryblok
     | ContactSectionStoryblok
     | FaqSectionStoryblok
-    | GridStoryblok
     | HeroStoryblok
     | HeroWithLinksStoryblok
     | MapSectionStoryblok
@@ -328,7 +284,6 @@ export interface PageStoryblok {
     | MenuTeaserSectionStoryblok
     | RatingStoryblok
     | ReviewsStoryblok
-    | TeaserStoryblok
   )[];
   title?: string;
   description?: string;
@@ -373,13 +328,5 @@ export interface ReviewsStoryblok {
   background_color: "" | "primary" | "secondary";
   _uid: string;
   component: "reviews";
-  [k: string]: any;
-}
-
-export interface TeaserStoryblok {
-  headline?: string;
-  image?: AssetStoryblok;
-  _uid: string;
-  component: "teaser";
   [k: string]: any;
 }
