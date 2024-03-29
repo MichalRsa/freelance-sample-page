@@ -16,7 +16,7 @@ export default defineConfig({
   integrations: [
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
-      bridge: isPreview(),
+      bridge: isPreview(env.STORYBLOK_IS_PREVIEW),
       components: {
         config: "storyblok/Config",
         page: "storyblok/Page",
@@ -43,7 +43,7 @@ export default defineConfig({
     tailwind(),
     sitemap(),
   ],
-  output: isPreview() ? "server" : "static",
+  output: isPreview(env.STORYBLOK_IS_PREVIEW) ? "server" : "static",
   ...(env.STORYBLOK_ENV === "development" && {
     vite: {
       plugins: [basicSsl()],
