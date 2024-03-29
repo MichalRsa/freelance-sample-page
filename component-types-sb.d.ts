@@ -30,7 +30,7 @@ export interface AboutUsSectionStoryblok {
 }
 
 export interface AllArticlesStoryblok {
-  title?: string;
+  type: "" | "past" | "future" | "all";
   _uid: string;
   component: "all-articles";
   [k: string]: any;
@@ -55,10 +55,11 @@ export interface AssetStoryblok {
 }
 
 export interface ArticleStoryblok {
-  image?: AssetStoryblok;
-  title?: string;
-  teaser?: string;
-  content?: RichtextStoryblok;
+  image: AssetStoryblok;
+  title: string;
+  teaser: string;
+  content: RichtextStoryblok;
+  date: string;
   _uid: string;
   component: "article";
   [k: string]: any;

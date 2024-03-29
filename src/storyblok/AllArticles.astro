@@ -3,6 +3,7 @@ import { storyblokEditable, useStoryblokApi } from "@storyblok/astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import isPreview from "../utils/isPreview";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import type { ArticleStoryblok } from "component-types-sb";
 const { blok, language } = Astro.props;
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get(`cdn/stories`, {
@@ -12,20 +13,30 @@ const { data } = await storyblokApi.get(`cdn/stories`, {
   language,
 });
 
-interface IArticle {
-  slug: string;
-  content: {
-    title: string;
-    intro: string;
-    slug: string;
-    image: {
-      filename: string;
-      alt: string;
-    };
-  };
+const articles: ArticleStoryblok[] = data.stories;
+
+function checkDateStatus(dateString: string) {
+  const date = new Date(dateString);
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  if (date < today) {
+    return "past";
+  } else if (date > today) {
+    return "future";
+  } else {
+    return "all";
+  }
 }
 
-const articles: IArticle[] = data.stories;
+const articlesList =
+  blok.type === "all"
+    ? articles
+    : articles?.filter(
+        (article) =>
+          checkDateStatus(article.content.date.split(" ")[0] as string) ===
+          blok.type,
+      );
 ---
 
 <SectionWrapper
@@ -37,8 +48,8 @@ const articles: IArticle[] = data.stories;
     class="m-auto grid max-w-3xl grid-cols-1 justify-items-center gap-6 lg:grid-cols-2"
   >
     {
-      articles?.length &&
-        articles.map((article) => {
+      articlesList.length &&
+        articlesList.map((article) => {
           article.content.slug = article.slug;
           return (
             <li class="w-full max-lg:max-w-80 lg:w-80">

@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import { getTransLink } from "../utils/langs";
 const { language, article } = Astro.props;
+
+const date = article.date.split(" ")[0];
 ---
 
 <article class="column flex h-full flex-col bg-secondary-300 shadow-main">
@@ -13,9 +15,12 @@ const { language, article } = Astro.props;
     alt={article.image.alt}
   />
   <div class="flex grow flex-col p-4">
-    <h2 class="text-lg font-semibold lg:text-xl">
+    <h2 class="mb-1 text-base font-semibold md:text-lg lg:text-xl">
       {article.title}
     </h2>
+    <p class="text-sm">
+      {date}
+    </p>
     <p class="text-gray-700 my-4 line-clamp-2 grow leading-relaxed">
       {article.teaser}
     </p>
