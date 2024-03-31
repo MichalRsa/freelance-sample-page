@@ -24,6 +24,7 @@
     "@storyblok/astro": "^4.0.2",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "astro": "^4.2.8",
+    "storyblok-js-client": "^6.7.1",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
