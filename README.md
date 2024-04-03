@@ -21,6 +21,8 @@ https://kawusia-coffe-bar.netlify.app/
 ## Project Description
 This project serves as an example of the template to build portfolio/product/blog websites. It is completely static which means it doesn't need a server and during the build time it generates all the files needed for the website to work.
 
+For a good and quick introduction to storyblok-astro.js integration, you can go through (The Storyblok Astro Ultimate Tutorial)[https://www.storyblok.com/tp/the-storyblok-astro-ultimate-tutorial].
+
 ### Its key components are:
 
 - **Astro.js** as an HTML-first framework gives things like JSX-like syntax, modules, and fenced js that run during the build time. If you before made such a project with React.js/Next.js. And you see it as too much for this kind of work, dealing with state, effects, useRefs, client site navigation, and shipping all the stuff as a JS bundle. Astro.js can feel like a big relief. It leaves the best part of React DX and gets rid of all bloated stuff, that you probably will never need in this kind of project. 
