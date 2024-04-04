@@ -56,8 +56,8 @@ export const pushStories = (StoryblokClient) => {
 
       const remainingFolders = [];
 
-      await Promise.all(
-        folders.map(async (folder) => {
+      await folders.reduce((prevPromise, folder) => {
+        return prevPromise.then(async () => {
           const isParent = doesParentExist(folder.parent_id, pushedFoldersIds);
           if (!!folder.parent_id && !isParent)
             return remainingFolders.push(folder);
@@ -80,8 +80,8 @@ export const pushStories = (StoryblokClient) => {
 
             return pushedFolder;
           } catch (error) {}
-        }),
-      );
+        });
+      }, Promise.resolve());
 
       await pushFolders(remainingFolders);
     };
