@@ -1,56 +1,46 @@
 import fs from "fs";
+import StoryblokService from "../services/StoryblokService.js";
 
-const spaceId = process.env.DESTINATION_STORYBLOK_SPACE_ID;
-
-export const pushComponents = async (StoryblokClient) => {
+export const pushComponents = async () => {
   const componentGroups = JSON.parse(
     fs.readFileSync("exportedData/component_group.json", "utf8"),
   );
 
-  await componentGroups.forEach(async (group) => {
-    await StoryblokClient.post(`/spaces/${spaceId}/component_groups/`, {
-      component_group: {
-        name: group.name,
-      },
-    })
-      .then((response) => {
-        console.log("Component groups created");
-      })
-      .catch((error) => {
-        console.log("Error while creating component groups");
-        console.log(error);
-      });
+  const groups = await Promise.all(
+    componentGroups.map((group) =>
+      StoryblokService.postComponentGroups(group.name)
+        .then((response) => {
+          return response.data.component_group;
+        })
+        .catch((error) => {
+          console.log("Error while creating component groups");
+          console.log(error);
+        }),
+    ),
+  ).then((data) => {
+    console.log("Component groups created");
+    return data;
   });
-
-  let groups;
-
-  await StoryblokClient.get(`/spaces/${spaceId}/component_groups/`, {})
-    .then((response) => {
-      groups = response.data.component_groups;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
 
   const components = JSON.parse(
     fs.readFileSync("exportedData/components.json", "utf8"),
   );
 
-  await components.forEach(async (component) => {
-    await StoryblokClient.post(`/spaces/${spaceId}/components/`, {
-      component: {
-        ...component,
-        component_group_uuid: groups.find(
-          (group) => group.name === component.groupName,
-        ).uuid,
-      },
-    })
-      .then((response) => {
-        console.log("Components created");
-      })
-      .catch((error) => {
+  await Promise.all(
+    components.map(async (component) =>
+      StoryblokService.postComponent({
+        component: {
+          ...component,
+          component_group_uuid: groups.find(
+            (group) => group.name === component.groupName,
+          ).uuid,
+        },
+      }).catch((error) => {
         console.log("Error while creating components");
         console.log(error);
-      });
+      }),
+    ),
+  ).then(() => {
+    console.log("Components created");
   });
 };
