@@ -1,7 +1,6 @@
 import fs from "fs";
-import StoryblokService from "../services/StoryblokService.js";
 
-export const pushStories = () => {
+export const pushStories = (StoryblokService) => {
   fs.readdir("exportedData/stories/", async (err, files) => {
     if (err) {
       console.error("Error reading directory:", err);

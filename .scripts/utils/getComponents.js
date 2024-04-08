@@ -1,7 +1,6 @@
 import fs from "fs";
-import StoryblokService from "../services/StoryblokService.js";
 
-export const getComponents = async () => {
+export const getComponents = async (StoryblokService) => {
   try {
     const response = await StoryblokService.getComponents();
 

@@ -1,7 +1,6 @@
 import fs from "fs";
-import StoryblokService from "../services/StoryblokService.js";
 
-export const getStories = async () => {
+export const getStories = async (StoryblokService) => {
   try {
     const response = await StoryblokService.getStories();
     const storiesId = response.data.stories.map((story) => story.id);

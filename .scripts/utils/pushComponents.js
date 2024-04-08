@@ -1,7 +1,6 @@
 import fs from "fs";
-import StoryblokService from "../services/StoryblokService.js";
 
-export const pushComponents = async () => {
+export const pushComponents = async (StoryblokService) => {
   const componentGroups = JSON.parse(
     fs.readFileSync("exportedData/component_group.json", "utf8"),
   );
