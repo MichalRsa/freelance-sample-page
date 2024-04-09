@@ -21,6 +21,7 @@
     "@astrojs/ts-plugin": "^1.5.3",
     "@fontsource/lora": "^5.0.13",
     "@fontsource/rubik": "^5.0.18",
+    "@inquirer/prompts": "^4.3.2",
     "@storyblok/astro": "^4.0.2",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "astro": "^4.2.8",

@@ -3,13 +3,14 @@ import { pushStories } from "./utils/pushStories.js";
 import { clearSpace } from "./utils/clearSpace.js";
 import { initStoryblokClient } from "./services/StoryblokService.js";
 
-const userToken = process.env.DESTINATION_STORYBLOK_USER_AUTH_TOKEN;
-const spaceId = process.env.DESTINATION_STORYBLOK_SPACE_ID;
+export const importSpaceData = async (credentials, elements) => {
+  const { userAuthToken, spaceId } = credentials;
 
-const StoryblokService = initStoryblokClient(spaceId, userToken);
+  const StoryblokService = initStoryblokClient(spaceId, userAuthToken);
 
-await clearSpace(StoryblokService);
+  await clearSpace(StoryblokService);
 
-await pushComponents(StoryblokService);
+  if (elements.includes("components")) await pushComponents(StoryblokService);
 
-pushStories(StoryblokService);
+  if (elements.includes("stories")) pushStories(StoryblokService);
+};

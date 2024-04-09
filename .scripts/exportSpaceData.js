@@ -2,11 +2,12 @@ import { initStoryblokClient } from "./services/StoryblokService.js";
 import { getComponents } from "./utils/getComponents.js";
 import { getStories } from "./utils/getStories.js";
 
-const userToken = process.env.STORYBLOK_USER_AUTH_TOKEN;
-const spaceId = process.env.STORYBLOK_SPACE_ID;
+export const exportSpaceData = async (credentials, elements) => {
+  const { userAuthToken, spaceId } = credentials;
 
-const StoryblokService = initStoryblokClient(spaceId, userToken);
+  const StoryblokService = initStoryblokClient(spaceId, userAuthToken);
 
-await getComponents(StoryblokService);
+  if (elements.includes("components")) await getComponents(StoryblokService);
 
-await getStories(StoryblokService);
+  if (elements.includes("stories")) await getStories(StoryblokService);
+};
