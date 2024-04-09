@@ -1,7 +1,9 @@
 import fs from "fs";
+import chalk from "chalk";
 
 export const getComponents = async (StoryblokService) => {
   try {
+    console.log(chalk.blue.bold.underline("Creating components..."));
     const response = await StoryblokService.getComponents();
 
     const componentGroups = response.data.component_groups;
@@ -15,26 +17,35 @@ export const getComponents = async (StoryblokService) => {
       };
     });
 
-    fs.writeFile(
-      "exportedData/component_group.json",
-      JSON.stringify(componentGroups, null, 2),
-      (err) => {
-        if (err)
-          console.log("Error while writting to component_group.json file", err);
-        console.log("Data written to file - component_group.json");
-      },
-    );
+    await fs.promises
+      .writeFile(
+        "exportedData/component_group.json",
+        JSON.stringify(componentGroups, null, 2),
+      )
+      .then(() =>
+        console.log(chalk.green("Data written to file - component_group.json")),
+      )
+      .catch((error) =>
+        console.log(
+          chalk.red("Error while writting to component_group.json file", error),
+        ),
+      );
 
-    fs.writeFile(
-      "exportedData/components.json",
-      JSON.stringify(components, null, 2),
-      (err) => {
-        if (err)
-          console.log("Error while writting to component.json file", err);
-        console.log("Data written to file - components.json");
-      },
-    );
+    await fs.promises
+      .writeFile(
+        "exportedData/components.json",
+        JSON.stringify(components, null, 2),
+      )
+      .then(() => {
+        console.log(chalk.green("Data written to file - components.json"));
+      })
+      .catch((error) =>
+        console.log(
+          chalk.red("Error while writting to component.json file", error),
+        ),
+      );
+    console.log(chalk.blue.bold.underline("Components added"));
   } catch (error) {
-    console.error("Error while fetching components", error);
+    console.error(chalk.red("Error while fetching components", error));
   }
 };

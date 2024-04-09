@@ -31,7 +31,7 @@ export const pushStories = (StoryblokService) => {
       if (count >= 20) return console.log("Too manu requests");
 
       if (folders.length === 0)
-        return console.log("All folders has been added");
+        return console.log("All folders have been added");
 
       const remainingFolders = [];
 
@@ -78,6 +78,6 @@ export const pushStories = (StoryblokService) => {
           console.log(error);
         });
       }),
-    );
+    ).then(() => "All Stories have been added");
   });
 };

@@ -4,8 +4,10 @@ import { Separator, checkbox, input, select } from "@inquirer/prompts";
 import { exportSpaceData } from "./exportSpaceData.js";
 import { importSpaceData } from "./importSpaceData.js";
 
+console.clear();
+
 const action = await select({
-  message: "What you want to do?",
+  message: "What do you want to do?",
   choices: [
     {
       name: "Export space data from my existing project",
