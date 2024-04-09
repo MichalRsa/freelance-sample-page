@@ -1,9 +1,11 @@
 import fs from "fs";
+import chalk from "chalk";
 
 export const pushStories = (StoryblokService) => {
+  console.log(chalk.blue.bold.underline("Adding stories"));
   fs.readdir("exportedData/stories/", async (err, files) => {
     if (err) {
-      console.error("Error reading directory:", err);
+      console.log(chalk.red("Error reading directory:", err));
       return;
     }
 
@@ -28,10 +30,12 @@ export const pushStories = (StoryblokService) => {
       !!idsArray.find((id) => id.oldId === parentId);
 
     const pushFolders = async (folders) => {
-      if (count >= 20) return console.log("Too manu requests");
+      if (count >= 20) return console.log(chalk.red("Too manu requests"));
 
       if (folders.length === 0)
-        return console.log("All folders have been added");
+        return console.log(
+          chalk.blue.bold.underline("All folders have been added"),
+        );
 
       const remainingFolders = [];
 
@@ -55,7 +59,7 @@ export const pushStories = (StoryblokService) => {
             count++;
             return pushedFolder;
           } catch (error) {
-            console.log("Error while adding folder", error);
+            console.log(chalk.red("Error while adding folder", error));
           }
         });
       }, Promise.resolve());
@@ -74,10 +78,12 @@ export const pushStories = (StoryblokService) => {
           : story.parent_id;
 
         await StoryblokService.postStory(story).catch((error) => {
-          console.log(`Error while adding story - ${story.name}`);
-          console.log(error);
+          console.log(chalk.red(`Error while adding story - ${story.name}`));
+          console.log(chalk.red(error));
         });
       }),
-    ).then(() => "All Stories have been added");
+    ).then(() =>
+      console.log(chalk.blue.bold.underline("All Stories have been added")),
+    );
   });
 };

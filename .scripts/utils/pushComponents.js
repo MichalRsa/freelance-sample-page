@@ -1,6 +1,8 @@
 import fs from "fs";
+import chalk from "chalk";
 
 export const pushComponents = async (StoryblokService) => {
+  console.log(chalk.blue.bold.underline("Uploading components..."));
   const componentGroups = JSON.parse(
     fs.readFileSync("exportedData/component_group.json", "utf8"),
   );
@@ -12,12 +14,12 @@ export const pushComponents = async (StoryblokService) => {
           return response.data.component_group;
         })
         .catch((error) => {
-          console.log("Error while creating component groups");
-          console.log(error);
+          console.log(chalk.red("Error while creating component groups"));
+          console.log(chalk.red(error));
         }),
     ),
   ).then((data) => {
-    console.log("Component groups created");
+    console.log(chalk.green("Component groups created"));
     return data;
   });
 
@@ -35,11 +37,11 @@ export const pushComponents = async (StoryblokService) => {
           ).uuid,
         },
       }).catch((error) => {
-        console.log("Error while creating components");
-        console.log(error);
+        console.log(chalk.red("Error while creating components"));
+        console.log(chalk.red(error));
       }),
     ),
   ).then(() => {
-    console.log("Components created");
+    console.log(chalk.green("Components created"));
   });
 };

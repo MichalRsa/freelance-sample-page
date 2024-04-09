@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 export const clearSpace = async (StoryblokService) => {
   try {
     const responseStories = await StoryblokService.getStories();
@@ -14,8 +16,9 @@ export const clearSpace = async (StoryblokService) => {
         StoryblokService.deleteComponent(component.id),
       ),
     );
-    console.log("Space cleared");
+    console.log(chalk.blue.bold.underline("Space cleared"));
   } catch (error) {
-    console.log(error);
+    console.log(chalk.red("Erro while preapring space"));
+    console.log(chalk.red(error));
   }
 };
