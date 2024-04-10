@@ -3,10 +3,11 @@
 - [Live Preview](#live-preview)
 - [Project Description](#project-description)
 - [Quickstart](#quickstart)
+- [Internationalization](#internationalization)
 - [Its key components are](#its-key-components-are)
-- [Project Structure](#project-structure)
+- [Project ](#project-structure)
 - [Website update](#website-update)
-- [Generating types for Storyblok](#generating-styles-for-storyblok)
+- [Generating types for Storyblok](#generating-types-for-storyblok)
 - [styles](#styles)
 - [Images](#images)
 - [JavaScript](#javascript)
@@ -17,7 +18,7 @@
 
 
 ## Live Preview
-https://kawusia-coffe-bar.netlify.app/
+https://kawusia-coffee-bar.netlify.app/
 
 ## Project Description
 This project serves as an example of the template to build portfolio/product/blog websites. It is completely static which means it doesn't need a server and during the build time it generates all the files needed for the website to work.
@@ -31,13 +32,19 @@ For a good and quick introduction to storyblok-astro.js integration, you can go 
   
   ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/1aaeadb8-64fd-484b-acba-71ab64abc15b)
   ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/44b9c350-5019-4175-ae75-215ebdab4e49)
-- `npm run prepare-space` => select `import data to a new space data`. Proceed with the installer.
+- `npm run prepare-space` => select `import data to a new space`. Proceed with the installer.
 - Add localhost to Preview URL
 
 ![Projekt bez nazwy (1)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/a000ac26-9d2d-4563-bca1-88675db1ca23)
 ![Projekt bez nazwy (2)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/edb0c167-cda9-4f43-bf4c-b9004990e10b)
 
 `npm run dev`
+
+## Internationalization
+The project uses field-level translations. Most of the stories' fields are already translated. To use translated fields, add language in settings:
+
+![Projekt bez nazwy (3)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/fb1451e0-e6d5-4dad-b0a2-e7e9636b6495)
+
 
 ### Its key components are:
 
@@ -46,7 +53,7 @@ For a good and quick introduction to storyblok-astro.js integration, you can go 
 - **Storyblok** is a great choice for editing as a nontechnical person, through a visual editor you can modify each Page, Section of the Page, and each component. It also gives us a lifetime free tier for one user, even for commercial purposes. 
 - Hosting on **Netlify**. Simple. GitHub and Storyblok integrations give us enough space to push our builds on code change and Storyblok content change. A free tier also allows us to build commercial projects and gives 100GB bandwidth, which is suitable for small websites.
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of the project, you'll see the following folders and files:
 
@@ -79,7 +86,7 @@ Any static assets, like images, can be placed in the `public/` directory.
 The website will be updated on push to `main` or through the Stroyblok hook when you update, add or remove a story.
 
 ## Generating types for Storyblok
-Each time you change the structure of Storyblok's block you have to generate types for the app
+Each time you change the  of Storyblok's block you have to generate types for the app
 
 To do that you have to install `npm i -g storyblok`. Then log in with your user's credentials. 
 
@@ -116,7 +123,7 @@ STORYBLOK_ENV=<development/production>
 ```
 
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
