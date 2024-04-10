@@ -1,0 +1,125 @@
+{
+  "name": "draft-post-test",
+  "parent_id": 464438033,
+  "group_id": "16c322db-0435-426f-bbcd-9249a549d511",
+  "alternates": [],
+  "created_at": "2024-03-20T08:13:11.876Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-29T09:07:32.579Z",
+  "published_at": "2024-03-29T09:07:32.556Z",
+  "id": 464438038,
+  "uuid": "2050e597-9216-4ae0-a969-ef5bce231306",
+  "is_folder": false,
+  "content": {
+    "_uid": "172568a2-7ea9-486f-b0d1-6e382ed838a4",
+    "date": "2024-02-29 08:03",
+    "image": {
+      "id": 14408682,
+      "alt": "",
+      "name": "",
+      "focus": "",
+      "title": "",
+      "source": "",
+      "filename": "https://a.storyblok.com/f/277873/5184x3456/624df597dc/pexels-leigh-patrick-298217.jpg",
+      "copyright": "",
+      "fieldtype": "asset",
+      "meta_data": {},
+      "is_private": false,
+      "is_external_url": false
+    },
+    "title": "New year party",
+    "teaser": " Sapien eget mi proin sed libero enim sed faucibus. Tellus elementum sagittis vitae et leo duis ut diam. ",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "tas purus viverra accumsan in. Proin gravida hendrerit lectus a. Sapien eget mi proin sed libero enim sed faucibus. Tellus elementum sagittis vitae et leo duis ut diam. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Lectus mauris ultrices eros in cursus turpis. Sed arcu non odio euismod lacinia at quis. Vivamus at augue eget arcu dictum. Rhoncus est pellentesque elit ullamcorper dignissim. Curabitur vitae nunc sed velit dignissim sodales ut eu sem.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A lacus vestibulum sed arcu non odio euismod. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. At elementum eu facilisis sed odio morbi quis. Morbi tristique senectus et netus et malesuada fames ac turpis. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Nullam non nisi est sit amet facilisis. Praesent elementum facilisis leo vel fringilla. Mollis aliquam ut porttitor leo a diam. Pulvinar pellentesque habitant morbi tristique senectus et netus et. Odio morbi quis commodo odio. Cras tincidunt lobortis feugiat vivamus at augue eget.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    "component": "article"
+  },
+  "published": true,
+  "slug": "draft-post-test",
+  "path": null,
+  "full_slug": "events/draft-post-test",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": {
+    "id": 464438033,
+    "uuid": "9c7cfec6-833f-4705-ba8a-aa671e3b3179",
+    "name": "events",
+    "slug": "events",
+    "disble_fe_editor": false
+  },
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "f7333ae5bafc531afdbd1e625d3ee57bac8ebc28",
+    "timestamp": "1712742465"
+  },
+  "pinned": false,
+  "breadcrumbs": [
+    {
+      "id": 464438033,
+      "name": "events",
+      "parent_id": 0,
+      "disble_fe_editor": false,
+      "path": null,
+      "slug": "events",
+      "translated_slugs": []
+    }
+  ],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-03-20T10:41:40.026Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "events/draft-post-test",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "events/draft-post-test",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -60,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

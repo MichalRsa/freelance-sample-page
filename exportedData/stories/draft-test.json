@@ -1,0 +1,109 @@
+{
+  "name": "draft-test",
+  "parent_id": 0,
+  "group_id": "f6b5f556-398f-4d5d-906e-e31aa70719ee",
+  "alternates": [],
+  "created_at": "2024-02-28T10:02:20.575Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-29T06:52:41.931Z",
+  "published_at": "2024-03-06T15:39:59.590Z",
+  "id": 452099564,
+  "uuid": "4b445b12-985c-4bbb-aa93-18105c289445",
+  "is_folder": false,
+  "content": {
+    "_uid": "5921b6b0-b110-4439-b2e9-c9956dc67425",
+    "body": [
+      {
+        "cta": [
+          {
+            "_uid": "d891e78e-b4f8-4205-87ff-3762e33f09c4",
+            "link": {
+              "id": "",
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            "text": "wow click me!",
+            "style": "primary",
+            "component": "link_button"
+          }
+        ],
+        "_uid": "92066228-1b24-44c6-98f4-e8114047522c",
+        "layout": "constrained",
+        "headline": "Here I test Page that is not publieshed yet",
+        "component": "hero",
+        "subheadline": "I AM A DRAFT PAGE !!!",
+        "background_image": {
+          "id": 13934226,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/273711/2445x2967/989e77e898/profile_pic-min.png",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": "",
+          "is_external_url": false
+        }
+      }
+    ],
+    "title": "",
+    "component": "page",
+    "description": "Kawusia | Cafe bar"
+  },
+  "published": false,
+  "slug": "draft-test",
+  "path": null,
+  "full_slug": "draft-test",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": true,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "a43b3aba0dc335324369aed079b460f7fee18139",
+    "timestamp": "1712742466"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-03-06T15:39:59.590Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "draft-test",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "draft-test",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -40,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

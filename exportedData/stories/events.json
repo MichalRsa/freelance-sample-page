@@ -1,0 +1,145 @@
+{
+  "name": "Events",
+  "parent_id": 464438033,
+  "group_id": "bc1415f9-be43-4f79-9508-c0966c3798ee",
+  "alternates": [],
+  "created_at": "2024-03-20T08:13:11.876Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-29T09:07:38.059Z",
+  "published_at": "2024-03-29T09:07:38.043Z",
+  "id": 464438037,
+  "uuid": "f2cca48e-2d6a-4015-9b19-349e8ea4fea3",
+  "is_folder": false,
+  "content": {
+    "_uid": "2f70968d-ac98-49bc-965d-6a82154d0db2",
+    "body": [
+      {
+        "_uid": "ed19c0b5-d2dd-483f-ae91-976d185888b6",
+        "links": [
+          {
+            "_uid": "656f2851-352b-4a15-b580-9d857a4f6459",
+            "link": {
+              "id": "f2cca48e-2d6a-4015-9b19-349e8ea4fea3",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "events/"
+            },
+            "text": "All",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Wszystkie"
+          },
+          {
+            "_uid": "b90479de-89f0-406a-8249-d8b0acfb03ef",
+            "link": {
+              "id": "61020d68-ef6f-4e15-b757-24177c6e635c",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "events/upcoming"
+            },
+            "text": "Upcoming",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Nadchodzące"
+          },
+          {
+            "_uid": "bc18a181-bc14-49b8-9aaf-a37304c0166f",
+            "link": {
+              "id": "afd27267-4852-4ef5-ba31-72f502f04d88",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "events/past"
+            },
+            "text": "Past",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Przeszłe"
+          }
+        ],
+        "title": "Events",
+        "component": "hero_with_links",
+        "title__i18n__pl": "Wydarzenia"
+      },
+      {
+        "_uid": "36cefd7e-79e0-47ed-aa80-bf41bfe02a01",
+        "type": "all",
+        "title": "",
+        "component": "all-articles"
+      }
+    ],
+    "title": "All Articles",
+    "component": "page",
+    "description": "Kawusia | Cafe bar"
+  },
+  "published": true,
+  "slug": "events",
+  "path": null,
+  "full_slug": "events/",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": {
+    "id": 464438033,
+    "uuid": "9c7cfec6-833f-4705-ba8a-aa671e3b3179",
+    "name": "events",
+    "slug": "events",
+    "disble_fe_editor": false
+  },
+  "is_startpage": true,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "f04b931693e80cc903f56bcff1135f80d5664c97",
+    "timestamp": "1712742464"
+  },
+  "pinned": false,
+  "breadcrumbs": [
+    {
+      "id": 464438033,
+      "name": "events",
+      "parent_id": 0,
+      "disble_fe_editor": false,
+      "path": null,
+      "slug": "events",
+      "translated_slugs": []
+    }
+  ],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-02-03T11:14:48.876Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "events/",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "events/",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -170,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

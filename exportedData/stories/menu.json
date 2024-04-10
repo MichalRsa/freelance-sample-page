@@ -1,0 +1,284 @@
+{
+  "name": "Menu",
+  "parent_id": null,
+  "group_id": "42d37ec6-0771-46ee-86fd-dfeed0e23bd7",
+  "alternates": [],
+  "created_at": "2024-03-03T17:36:25.373Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-22T13:58:42.623Z",
+  "published_at": "2024-03-22T13:58:42.602Z",
+  "id": 454245023,
+  "uuid": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+  "is_folder": false,
+  "content": {
+    "_uid": "6c5477fe-5be0-4a55-9779-02ccd51f4f16",
+    "body": [
+      {
+        "_uid": "6ac7d0f7-5e00-49c8-a2a4-fc3e6d4a8bff",
+        "links": [
+          {
+            "_uid": "e9a789c1-d9e8-4c5a-8ed5-723c1e993e74",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "anchor": "coffee",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Coffee",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Kawa"
+          },
+          {
+            "_uid": "f1e210b8-94b4-4ac2-9b41-b73ebf58b737",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "anchor": "tea",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Tea",
+            "style": "",
+            "component": "link",
+            "text__i18n__pl": "Herbata"
+          },
+          {
+            "_uid": "d7bc4c96-535d-49b0-b282-c5a0c0c408ba",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "anchor": "treats",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Treats",
+            "style": "",
+            "component": "link",
+            "text__i18n__pl": "Smakołyki"
+          }
+        ],
+        "title": "Menu",
+        "component": "hero_with_links"
+      },
+      {
+        "_uid": "3bc4c877-fb97-4d07-acd9-277e1429294f",
+        "menu": [
+          {
+            "id": "Coffee",
+            "_uid": "7c26dfdb-422d-4007-af1a-deb51f3834dc",
+            "menu": [
+              {
+                "_uid": "b7582248-4b0e-4687-8adc-6f287089a2b1",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "9807b041-9611-4122-a9a8-492751d0797d",
+                "item": "Americano",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "bddacec5-5fcf-47f0-bd3c-d98e6bf2789e",
+                "item": "Cappucion",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "f9eceb76-3794-453d-beb0-3979eec043a2",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "02f8946f-592f-411d-9a0b-f71631261b62",
+                "item": "Cafe Latte",
+                "price": "14 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "4ab233b1-6903-4e94-9488-0cd20e086cad",
+                "item": "Cold Brew",
+                "price": "16 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "202c35f5-ee21-459e-8ce4-12ed764aa7dc",
+                "item": "Aero Press",
+                "price": "16 pln",
+                "component": "menu_row"
+              }
+            ],
+            "title": "coffee",
+            "component": "menu_card",
+            "title__i18n__pl": "Kawa"
+          },
+          {
+            "id": "tea",
+            "_uid": "232aca28-6f50-404a-95c3-4b97e8d41125",
+            "menu": [
+              {
+                "_uid": "4c17ec58-94b2-4e36-86ef-19240ad8ad78",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "7174421f-38cd-46c0-b9a4-14df94af5e7a",
+                "item": "Americano",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "9c90b5aa-d2c7-4b5e-a1a6-32f5286ec3b2",
+                "item": "Cappucion",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "2950bc69-460b-4283-857b-f686e9c0db21",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "d1cdf50c-f3d0-4bf4-97a6-63cd36d6bf5a",
+                "item": "Cafe Latte",
+                "price": "14 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "b497659a-125a-4207-9fae-9e447be23d1f",
+                "item": "Cold Brew",
+                "price": "16 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "b892d38f-7783-45ee-9377-48f9467d2ffa",
+                "item": "Aero Press",
+                "price": "16 pln",
+                "component": "menu_row"
+              }
+            ],
+            "title": "Tea",
+            "component": "menu_card",
+            "title__i18n__pl": "Herbata"
+          },
+          {
+            "id": "treats",
+            "_uid": "73b809b8-f3d3-43cc-b916-d0517307f05e",
+            "menu": [
+              {
+                "_uid": "10571274-e90c-4998-9a80-a61c81374612",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "c95a8b12-baf3-4b24-993f-c137728fcb8b",
+                "item": "Americano",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "96f80d3f-b3df-416d-848f-3462ef06b680",
+                "item": "Cappucion",
+                "price": "12 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "316a4a9c-856f-4468-aa51-b4a7d92061cd",
+                "item": "Expresso",
+                "price": "8 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "d170200d-7e38-467e-ab7c-2bdcc6951a40",
+                "item": "Cafe Latte",
+                "price": "14 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "9bda11b4-3b58-4a7f-a7b6-aa406cf0a10c",
+                "item": "Cold Brew",
+                "price": "16 pln",
+                "component": "menu_row"
+              },
+              {
+                "_uid": "06a7c289-575a-47b4-8e1f-6fe10e9ed220",
+                "item": "Aero Press",
+                "price": "16 pln",
+                "component": "menu_row"
+              }
+            ],
+            "title": "Treats",
+            "component": "menu_card",
+            "title__i18n__pl": "Smakołyki"
+          }
+        ],
+        "component": "menu_cards"
+      }
+    ],
+    "title": "Kawusia | Cafe bar",
+    "component": "page",
+    "description": ""
+  },
+  "published": true,
+  "slug": "menu",
+  "path": null,
+  "full_slug": "menu",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "e0ab10b64b51200c21e565cc9b4630a23ee73cca",
+    "timestamp": "1712742469"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-03-06T15:39:54.810Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "menu",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "menu",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": 0,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

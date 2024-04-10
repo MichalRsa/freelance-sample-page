@@ -1,0 +1,134 @@
+{
+  "name": "Hey, my job sucks!",
+  "parent_id": 464438033,
+  "group_id": "049b12ef-83e8-4990-b691-e2b3e271a770",
+  "alternates": [],
+  "created_at": "2024-03-20T08:13:11.876Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-29T09:07:51.290Z",
+  "published_at": "2024-03-29T09:07:51.273Z",
+  "id": 464438036,
+  "uuid": "f883adbe-42db-4d4a-8b43-a2bbfa81a106",
+  "is_folder": false,
+  "content": {
+    "_uid": "3d8765e0-07c9-48fc-a9f1-faa6d4708595",
+    "date": "2024-06-29 08:03",
+    "image": {
+      "id": 14408684,
+      "alt": "",
+      "name": "",
+      "focus": "",
+      "title": "",
+      "source": "",
+      "filename": "https://a.storyblok.com/f/277873/4000x6000/b73a3ea8e7/pexels-olena-bohovyk-1772124.jpg",
+      "copyright": "",
+      "fieldtype": "asset",
+      "meta_data": {},
+      "is_private": false,
+      "is_external_url": false
+    },
+    "title": "Some event",
+    "teaser": "tas purus viverra accumsan in. Proin gravida hendrerit lectus a. Sapien eget mi proin sed libero enim sed faucibus. Tellus elementum sagittis vitae et leo duis ut diam. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. ",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "tas purus viverra accumsan in. Proin gravida hendrerit lectus a. Sapien eget mi proin sed libero enim sed faucibus. Tellus elementum sagittis vitae et leo duis ut diam. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Lectus mauris ultrices eros in cursus turpis. Sed arcu non odio euismod lacinia at quis. Vivamus at augue eget arcu dictum. Rhoncus est pellentesque elit ullamcorper dignissim. Curabitur vitae nunc sed velit dignissim sodales ut eu sem.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A lacus vestibulum sed arcu non odio euismod. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. At elementum eu facilisis sed odio morbi quis. Morbi tristique senectus et netus et malesuada fames ac turpis. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Nullam non nisi est sit amet facilisis. Praesent elementum facilisis leo vel fringilla. Mollis aliquam ut porttitor leo a diam. Pulvinar pellentesque habitant morbi tristique senectus et netus et. Odio morbi quis commodo odio. Cras tincidunt lobortis feugiat vivamus at augue eget.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tellus mauris a diam maecenas. In cursus turpis massa tincidunt dui ut ornare. Quam pellentesque nec nam aliquam sem et. Vitae nunc sed velit dignissi",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    "component": "article"
+  },
+  "published": true,
+  "slug": "hey-my-job-sucks",
+  "path": null,
+  "full_slug": "events/hey-my-job-sucks",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": {
+    "id": 464438033,
+    "uuid": "9c7cfec6-833f-4705-ba8a-aa671e3b3179",
+    "name": "events",
+    "slug": "events",
+    "disble_fe_editor": false
+  },
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "79e37c1a004f6e75f11a250fbc0e3ca9c4d88034",
+    "timestamp": "1712742467"
+  },
+  "pinned": false,
+  "breadcrumbs": [
+    {
+      "id": 464438033,
+      "name": "events",
+      "parent_id": 0,
+      "disble_fe_editor": false,
+      "path": null,
+      "slug": "events",
+      "translated_slugs": []
+    }
+  ],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-02-03T11:46:47.496Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "events/hey-my-job-sucks",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "events/hey-my-job-sucks",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -20,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

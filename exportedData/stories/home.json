@@ -1,0 +1,408 @@
+{
+  "name": "Home",
+  "parent_id": 0,
+  "group_id": "e8d4a81f-f46c-4418-9b6e-e6233392986b",
+  "alternates": [],
+  "created_at": "2024-02-28T10:02:20.575Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-22T12:15:15.494Z",
+  "published_at": "2024-03-22T12:15:15.462Z",
+  "id": 452099560,
+  "uuid": "6e549cee-44bf-4371-96d2-34043153e2ba",
+  "is_folder": false,
+  "content": {
+    "_uid": "1b8e59f6-1e6f-4ade-93cd-75e16f64e89a",
+    "body": [
+      {
+        "cta": [
+          {
+            "_uid": "7db69a45-e273-4b66-8446-1261253e764c",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Menu",
+            "style": "primary",
+            "component": "link_button"
+          }
+        ],
+        "_uid": "b2a12e1e-08e1-4f59-8c9a-f46809560c09",
+        "layout": "full-width",
+        "headline": "Welcome to Kawusia",
+        "component": "hero",
+        "subheadline": "Enter our cozy space, where friends brew exceptional coffee and serve homemade treats",
+        "background_image": {
+          "id": 14914777,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/277873/5041x3361/7f54544b8a/pexels-marta-dzedyshko-2067431.jpg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "headline__i18n__pl": " Witajcie w Kawusi,",
+        "subheadline__i18n__pl": "Zapraszamy do naszej przytulnej przestrzeni, gdzie przyjaciele parzą wyjątkową kawę i podają domowe smakołyki."
+      },
+      {
+        "_uid": "5d6e01e7-4b76-4419-aa62-f586bc6f73ac",
+        "title": "Our customers say",
+        "reviews": [
+          {
+            "_uid": "e9e036dc-4db0-4a41-b19f-093cd35d4c37",
+            "name": "John Doe",
+            "role": "Customer",
+            "image": {
+              "id": 14426162,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/150x150/d0e6a4fd98/image-1.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "rating": "4",
+            "review": "“Lorem ipsum dolor sit amet consectetur. Mattis eu accumsan egestas eleifend nunc quis fringilla. Morbi viverra felis ultricies ultrices nunc. Ornare feugiat sed elit sed molestie. Pharetra scelerisque etiam pellentesque ultrices purus diam a suspendisse.”",
+            "component": "review-card",
+            "role__i18n__pl": "Klient",
+            "review__i18n__pl": "Atmosfera jest niesamowicie relaksująca, idealna na spotkania z przyjaciółmi lub chwilę wytchnienia sam na sam z książką. Kawa jest wyjątkowo aromatyczna i doskonale przygotowana, a domowe smakołyki są po prostu pyszne. Obsługa jest serdeczna i pomocna, co sprawia, że każda wizyta w Twojej kawiarni to prawdziwa przyjemność."
+          },
+          {
+            "_uid": "b720f355-21f8-4a58-8870-1425a264606a",
+            "name": "John Doe",
+            "role": "Customer",
+            "image": {
+              "id": 14426162,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/150x150/d0e6a4fd98/image-1.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "rating": "4",
+            "review": "“Lorem ipsum dolor sit amet consectetur. Mattis eu accumsan egestas eleifend nunc quis fringilla. Morbi viverra felis ultricies ultrices nunc. Ornare feugiat sed elit sed molestie. Pharetra scelerisque etiam pellentesque ultrices purus diam a suspendisse.”",
+            "component": "review-card",
+            "role__i18n__pl": "Klient"
+          },
+          {
+            "_uid": "9406492f-bb95-4a58-b3f8-fd28d2073db7",
+            "name": "John Doe",
+            "role": "Customer",
+            "image": {
+              "id": 14426162,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/150x150/d0e6a4fd98/image-1.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "rating": "4",
+            "review": "“Lorem ipsues nunc. Ornare feugiat sed elit sed molestie. Pharetra scelerisque etiam pellentesque ultrices purus diam a suspendisse.”",
+            "component": "review-card",
+            "role__i18n__pl": "Klient"
+          }
+        ],
+        "component": "reviews",
+        "title__i18n__pl": "Nasi klienci mówią",
+        "background_color": "primary"
+      },
+      {
+        "cta": [
+          {
+            "_uid": "f42f7391-913a-4aaa-8831-4f96dd5b92e0",
+            "link": {
+              "id": "",
+              "url": "https://business.google.com/reviews",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://business.google.com/reviews"
+            },
+            "text": "See Our Google Reviews",
+            "style": "primary",
+            "component": "link_button",
+            "text__i18n__pl": "Zobacz nasze recenzje na Google"
+          }
+        ],
+        "_uid": "88e6be6a-b8c7-48a4-8bc3-02d4ae935d15",
+        "title": "400+ people love our caffe ",
+        "rating": "4.8",
+        "component": "rating",
+        "title__i18n__pl": "400+ osób kocha naszą kawiarnię.",
+        "background_color": "secondary"
+      },
+      {
+        "cta": [
+          {
+            "_uid": "60e6993e-6da2-4224-873b-3565fa630134",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "See Full Menu",
+            "style": "primary",
+            "component": "link_button",
+            "text__i18n__pl": " Zobacz pełne menu"
+          }
+        ],
+        "_uid": "89a65e0c-96b3-41ea-8a90-2d8469c66608",
+        "title": "Here you will find",
+        "component": "menu_teaser_section",
+        "teaser_card": [
+          {
+            "_uid": "84096bf9-bdc3-427e-bd40-943d19adb637",
+            "image": {
+              "id": 14423626,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/377x376/b5b54851ee/image-8.jpg",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "title": "Coffe",
+            "component": "menu_teaser_card",
+            "title__i18n__pl": "Kawa"
+          },
+          {
+            "_uid": "cdd51eae-72c1-407e-bb4c-be5223f39323",
+            "image": {
+              "id": 14423625,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/378x376/6bb2f00d22/image-7.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "title": "Tea",
+            "component": "menu_teaser_card",
+            "title__i18n__pl": "Herbata"
+          },
+          {
+            "_uid": "1087c9c0-66b2-402c-b4af-3d74b2cec33a",
+            "image": {
+              "id": 14423624,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/377x376/50e5d641d4/image-6.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "title": "Treats",
+            "component": "menu_teaser_card",
+            "title__i18n__pl": "Smakołyki"
+          }
+        ],
+        "title__i18n__pl": "Tutaj znajdziesz",
+        "background_color": "primary"
+      },
+      {
+        "cta": [
+          {
+            "_uid": "1d44a2c8-00c7-409d-b44e-491de2e6686e",
+            "link": {
+              "id": "",
+              "url": "https://www.google.com/maps/dir//Rynek+G%C5%82%C3%B3wny,+31-422+Krak%C3%B3w/@50.0619005,19.934181,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47165b120455da67:0xc3c7f5071b750d33!2m2!1d19.9367559!2d50.0618971!3e0?entry=ttu",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://www.google.com/maps/dir//Rynek+G%C5%82%C3%B3wny,+31-422+Krak%C3%B3w/@50.0619005,19.934181,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47165b120455da67:0xc3c7f5071b750d33!2m2!1d19.9367559!2d50.0618971!3e0?entry=ttu"
+            },
+            "text": "Navigate",
+            "style": "secondary",
+            "component": "link_button",
+            "text__i18n__pl": "Nawiguj"
+          }
+        ],
+        "_uid": "010b3912-52e8-406b-81d3-08cab4fbfc98",
+        "title": "Where we are",
+        "address": "ul. Beautiful Street 105, City",
+        "component": "map_section",
+        "description": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Parking",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Lorem ipsum dolor sit amet consectetur. At sit quis amet vitae venenatis tincidunt dui neque id. Dictumst integer iaculis augue arcu cras egestas.",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "title__i18n__pl": "Gdzie jesteśmy",
+        "background_color": "secondary"
+      },
+      {
+        "_uid": "90d2bc9f-d947-41d0-9a97-80804301f743",
+        "title": "Frequently Asked Questions",
+        "component": "faq_section",
+        "faq_cards": [
+          {
+            "_uid": "607d90b5-b122-464c-b418-597494877b98",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "question": "How can I get there?",
+            "component": "faq_card",
+            "question__i18n__pl": "Jak mogę tam dotrzeć?"
+          },
+          {
+            "_uid": "ffaf35bd-5a19-4c24-802a-04123d2189d1",
+            "answer": "Hell yeah! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "question": "Do you serve cold brew.",
+            "component": "faq_card",
+            "question__i18n__pl": " Czy serwujemy kawę na zimno (cold brew)?"
+          },
+          {
+            "_uid": "e462861d-6223-49e9-a554-871f5237215e",
+            "answer": "No worries,, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "question": "But i don't like coffe...",
+            "component": "faq_card",
+            "question__i18n__pl": " Ale ja nie lubię kawy..."
+          }
+        ],
+        "title__i18n__pl": "Najczęściej zadawane pytania"
+      }
+    ],
+    "title": "Kawusia | Cofe bar",
+    "component": "page",
+    "description": "Savor the aroma of freshly brewed coffee at our welcoming coffee bar. Experience a variety of handcrafted beverages and delectable treats in a relaxed atmosphere. Explore our menu now!"
+  },
+  "published": true,
+  "slug": "home",
+  "path": "/",
+  "full_slug": "home",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "e0ab10b64b51200c21e565cc9b4630a23ee73cca",
+    "timestamp": "1712742469"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-02-03T11:15:38.778Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "home",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "home",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": 0,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

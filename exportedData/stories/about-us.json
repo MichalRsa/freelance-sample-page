@@ -1,0 +1,294 @@
+{
+  "name": "About Us",
+  "parent_id": null,
+  "group_id": "48893d6a-2e75-4321-9fb2-00e88d084d11",
+  "alternates": [],
+  "created_at": "2024-03-19T15:21:57.440Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-22T12:15:14.454Z",
+  "published_at": "2024-03-22T12:15:14.435Z",
+  "id": 464055383,
+  "uuid": "225f7a84-a3e9-45bc-81d8-acd1acdb0034",
+  "is_folder": false,
+  "content": {
+    "_uid": "d75c2828-b015-4494-8de0-1cf192ca4660",
+    "body": [
+      {
+        "_uid": "d3dfe7c1-fc72-4917-bf74-f2e3b53cc8dc",
+        "title": "About us",
+        "images": [
+          {
+            "id": 14408682,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/277873/5184x3456/624df597dc/pexels-leigh-patrick-298217.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {},
+            "is_private": false
+          },
+          {
+            "id": 14423626,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/277873/377x376/b5b54851ee/image-8.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {},
+            "is_private": false
+          },
+          {
+            "id": 14408681,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/277873/3456x5184/424e34d649/pexels-nastyasensei-2575835.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {},
+            "is_private": false
+          },
+          {
+            "id": 14408679,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/277873/3024x4032/534575a804/pexels-caeli-team-3714960.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {},
+            "is_private": false
+          },
+          {
+            "id": 14914777,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/277873/5041x3361/7f54544b8a/pexels-marta-dzedyshko-2067431.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {},
+            "is_private": false
+          }
+        ],
+        "component": "about_us_section",
+        "description": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "At ",
+                  "type": "text"
+                },
+                {
+                  "text": "Kawusia",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "text": ", our journey began in 2023 when a group of friends, fueled by a mutual love for coffee, decided to turn their passion into a vibrant community hub.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "image",
+                  "attrs": {
+                    "id": 14844185,
+                    "alt": "",
+                    "src": "https://a.storyblok.com/f/277873/534x534/ba58746141/mask-group.png",
+                    "title": "",
+                    "source": "",
+                    "copyright": "",
+                    "meta_data": "[object Object]"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "paragraph"
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": " With each cup meticulously crafted, we aim to not only offer exceptional coffee but to also share the stories behind every bean and blend.",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Our cozy space provides a sanctuary where friendships flourish over aromatic brews and homemade treats, inviting you to savor not just a beverage, but a heartfelt experience woven with warmth and camaraderie.",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "title__i18n__pl": "O nas",
+        "background_color": "ternary",
+        "description__i18n__pl": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "W Kawusia nasza podróż rozpoczęła się w 2023 roku, kiedy grupa przyjaciół, zainspirowana wspólną miłością do kawy, postanowiła przekształcić swoją pasję w pulsujące centrum społeczności.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "image",
+                  "attrs": {
+                    "id": 14844185,
+                    "alt": "",
+                    "src": "https://a.storyblok.com/f/277873/534x534/ba58746141/mask-group.png",
+                    "title": "",
+                    "source": "",
+                    "copyright": "",
+                    "meta_data": {}
+                  }
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Z każdym filiżanką starannie przygotowaną, naszym celem jest nie tylko oferowanie wyjątkowej kawy, ale także dzielenie się historiami za każdym ziarnem i mieszanką.",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Nasza przytulna przestrzeń zapewnia schronienie, gdzie przyjaźnie rozkwitają przy aromatycznych naparach i domowych smakołykach, zapraszając Cię do delektowania się nie tylko napojem, ale też serdecznym doświadczeniem splecionym z ciepłem i koleżeństwem.",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "title": "",
+    "component": "page",
+    "description": "Kawusia | Cafe bar"
+  },
+  "published": true,
+  "slug": "about-us",
+  "path": null,
+  "full_slug": "about-us",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "79e37c1a004f6e75f11a250fbc0e3ca9c4d88034",
+    "timestamp": "1712742467"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-03-19T19:17:20.052Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "about-us",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "about-us",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -20,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

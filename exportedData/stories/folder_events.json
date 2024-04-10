@@ -1,0 +1,66 @@
+{
+  "name": "events",
+  "parent_id": 0,
+  "group_id": "97b1fa77-e47d-4429-a20c-499b9cc1d1a8",
+  "alternates": [],
+  "created_at": "2024-03-20T08:13:11.793Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-20T08:13:11.793Z",
+  "published_at": null,
+  "id": 464438033,
+  "uuid": "9c7cfec6-833f-4705-ba8a-aa671e3b3179",
+  "is_folder": true,
+  "content": null,
+  "published": false,
+  "slug": "events",
+  "path": null,
+  "full_slug": "events",
+  "default_root": "article",
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": true,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "a43b3aba0dc335324369aed079b460f7fee18139",
+    "timestamp": "1712742466"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": null,
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "events",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "events",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -30,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

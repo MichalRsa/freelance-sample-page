@@ -1,0 +1,376 @@
+{
+  "name": "Config",
+  "parent_id": 0,
+  "group_id": "0c6bd27f-2ca0-4fec-8aca-2dd3dd49f803",
+  "alternates": [],
+  "created_at": "2024-02-28T10:02:20.575Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-29T06:47:42.108Z",
+  "published_at": "2024-03-29T06:47:42.084Z",
+  "id": 452099562,
+  "uuid": "5cbad807-ed49-43c1-aa9c-3e7c8e85bd4e",
+  "is_folder": false,
+  "content": {
+    "_uid": "7a7da8d0-358b-4fb7-9f7f-411b18a9ffdb",
+    "footer": [
+      {
+        "_uid": "9850d127-3d9f-4b28-b6dc-42c740d573d9",
+        "socials": [
+          {
+            "_uid": "de3bbe62-5d56-42bc-9b90-a1a5195721e2",
+            "component": "social_icon_link",
+            "social_icon": {
+              "id": 14439460,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/96x96/a40f163ce4/instagram.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "social_link": {
+              "id": "",
+              "url": "https://www.instagram.com/",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://www.instagram.com/"
+            }
+          },
+          {
+            "_uid": "c605df0e-42d9-4c4a-a956-f92ddb57e99a",
+            "component": "social_icon_link",
+            "social_icon": {
+              "id": 14439446,
+              "alt": "",
+              "name": "",
+              "focus": "",
+              "title": "",
+              "source": "",
+              "filename": "https://a.storyblok.com/f/277873/96x96/0e774bc6f4/facebook.png",
+              "copyright": "",
+              "fieldtype": "asset",
+              "meta_data": {},
+              "is_private": false,
+              "is_external_url": false
+            },
+            "social_link": {
+              "id": "",
+              "url": "https://www.facebook.com/",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://www.facebook.com/"
+            }
+          }
+        ],
+        "component": "main_footer",
+        "footer_menu": [
+          {
+            "_uid": "d27d5708-a761-4b20-b668-09c822809f48",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Menu",
+            "style": "",
+            "component": "link"
+          },
+          {
+            "_uid": "822b3e88-e392-49d4-88db-cb58f6c7cc8c",
+            "link": {
+              "id": "225f7a84-a3e9-45bc-81d8-acd1acdb0034",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "about-us"
+            },
+            "text": "About",
+            "style": "link",
+            "component": "link"
+          },
+          {
+            "_uid": "44f73623-459b-4482-a53f-eb5703e15026",
+            "link": {
+              "id": "f2cca48e-2d6a-4015-9b19-349e8ea4fea3",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "events/"
+            },
+            "text": "Events",
+            "style": "link",
+            "component": "link"
+          }
+        ],
+        "phone_number": "+48 123 456 789",
+        "opening_hours": [
+          {
+            "day": "Monday",
+            "_uid": "5719ed73-e7d2-41e2-9064-8b373ea15e5d",
+            "hours": "Closed",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Tuesday",
+            "_uid": "7c6279da-ee7e-4335-9d37-701e51efa2ab",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Wednesday",
+            "_uid": "b0df828b-0298-42cb-9364-4f73635772aa",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Thursday",
+            "_uid": "3936ead4-45c6-447f-b84c-e013cad1709c",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Friday",
+            "_uid": "c38f8dd7-2754-4278-94cb-3bc1ac5d5b35",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Saturday",
+            "_uid": "371ec767-c062-408d-971c-595aadace6f9",
+            "hours": "8:00 - 23:00",
+            "component": "day_opening_hours"
+          },
+          {
+            "day": "Sunday",
+            "_uid": "2d965990-b458-4bd1-b69e-7977488265f8",
+            "hours": "8:00 - 14:00",
+            "component": "day_opening_hours"
+          }
+        ]
+      }
+    ],
+    "header": [
+      {
+        "_uid": "21c4acd4-f3d9-41ce-b3d0-181509d33291",
+        "menu": [
+          {
+            "_uid": "9592e9fb-9a17-472b-9243-eafd00dce949",
+            "link": {
+              "id": "7dec065e-da7c-4874-882b-90ddfc33baa2",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "contact"
+            },
+            "text": "Contact",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Kontakt"
+          },
+          {
+            "_uid": "521ccbf6-3956-444a-b63a-84950a245559",
+            "link": {
+              "id": "225f7a84-a3e9-45bc-81d8-acd1acdb0034",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "about-us"
+            },
+            "text": "About",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "O Nas"
+          },
+          {
+            "_uid": "634d39b1-6132-44df-95ff-cdc2974b144b",
+            "link": {
+              "id": "f2cca48e-2d6a-4015-9b19-349e8ea4fea3",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "events/"
+            },
+            "text": "Events",
+            "style": "link",
+            "component": "link",
+            "text__i18n__pl": "Wydarzenia"
+          },
+          {
+            "_uid": "a6bc9691-2a05-4e53-8fca-f0ebaceba01d",
+            "link": {
+              "id": "2fd445fd-b5e0-49fe-8e91-fabfb7de0f57",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "menu"
+            },
+            "text": "Menu",
+            "style": "primary",
+            "component": "link_button"
+          }
+        ],
+        "component": "main_header"
+      }
+    ],
+    "socials": [
+      {
+        "id": 14439460,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/277873/96x96/a40f163ce4/instagram.png",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {},
+        "is_private": false
+      },
+      {
+        "id": 14439446,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/277873/96x96/0e774bc6f4/facebook.png",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {},
+        "is_private": false
+      }
+    ],
+    "component": "config",
+    "footer_menu": [
+      {
+        "_uid": "3ffe664a-85d1-425b-8c17-54cad4c90b09",
+        "link": {
+          "id": "614c9780-59e5-45a9-a208-250a30641fc1",
+          "url": "",
+          "linktype": "story",
+          "fieldtype": "multilink",
+          "cached_url": "about"
+        },
+        "type": "default",
+        "component": "link"
+      },
+      {
+        "_uid": "e49599b7-84b0-4a37-b352-46eb35324084",
+        "link": {
+          "id": "0a3bf11f-f58a-4e16-95a8-120ee684b806",
+          "url": "",
+          "linktype": "story",
+          "fieldtype": "multilink",
+          "cached_url": "blog/"
+        },
+        "type": "default",
+        "component": "link"
+      }
+    ],
+    "header_menu": [],
+    "phone_number": "+48 123 456 789",
+    "opening_hours": [
+      {
+        "day": "Poniedziałek",
+        "_uid": "95043db9-75de-4585-b205-5da1f5037167",
+        "hours": "Zamknięte",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Wtorek",
+        "_uid": "8a265b26-22a2-4f49-945e-6761dc2c8535",
+        "hours": "8:00 - 22:00",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Środa",
+        "_uid": "a4b5c586-ee4b-4fb8-895b-133d3b5f00b3",
+        "hours": "8:00 - 22:00",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Czwartek",
+        "_uid": "62fe0fa7-2320-4b03-9ca8-235a276173ef",
+        "hours": "8:00 - 22:00",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Piątek",
+        "_uid": "edcffe8a-796a-4a26-91b8-88bfcabee099",
+        "hours": "8:00 - 22:00",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Sobota",
+        "_uid": "bf2c5582-4d58-4ef5-b097-b8369e82c582",
+        "hours": "8:00 - 22:00",
+        "component": "day_opening_hours"
+      },
+      {
+        "day": "Niedziela",
+        "_uid": "be11fdc4-bdcd-4929-b3b6-81b92dfd8560",
+        "hours": "8:00 - 16:00",
+        "component": "day_opening_hours"
+      }
+    ]
+  },
+  "published": true,
+  "slug": "config",
+  "path": null,
+  "full_slug": "config",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "79e37c1a004f6e75f11a250fbc0e3ca9c4d88034",
+    "timestamp": "1712742467"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-02-03T11:15:28.976Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "config",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "config",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -20,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

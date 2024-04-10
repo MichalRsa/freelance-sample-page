@@ -1,0 +1,239 @@
+{
+  "name": "Contact",
+  "parent_id": null,
+  "group_id": "7b0ca9b5-1544-4947-917d-0c479950671a",
+  "alternates": [],
+  "created_at": "2024-03-19T12:47:35.826Z",
+  "deleted_at": null,
+  "sort_by_date": null,
+  "tag_list": [],
+  "updated_at": "2024-03-24T08:19:47.650Z",
+  "published_at": "2024-03-24T08:19:47.622Z",
+  "id": 463951771,
+  "uuid": "7dec065e-da7c-4874-882b-90ddfc33baa2",
+  "is_folder": false,
+  "content": {
+    "_uid": "655d2e4c-bf72-4d91-9d49-e58a147b1612",
+    "body": [
+      {
+        "cta": [
+          {
+            "_uid": "260b1ef0-8ba3-4408-9a1e-5f46aaef3cd5",
+            "link": {
+              "id": "",
+              "url": "https://www.google.com/maps/dir//Rynek+G%C5%82%C3%B3wny,+31-422+Krak%C3%B3w/@50.0619005,19.934181,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47165b120455da67:0xc3c7f5071b750d33!2m2!1d19.9367559!2d50.0618971!3e0?entry=ttu",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://www.google.com/maps/dir//Rynek+G%C5%82%C3%B3wny,+31-422+Krak%C3%B3w/@50.0619005,19.934181,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47165b120455da67:0xc3c7f5071b750d33!2m2!1d19.9367559!2d50.0618971!3e0?entry=ttu"
+            },
+            "text": "Navigate",
+            "style": "secondary",
+            "component": "link_button",
+            "text__i18n__pl": "Nawiguj"
+          }
+        ],
+        "_uid": "4455d1fa-6991-401e-896c-c4722f17ed2b",
+        "email": [
+          {
+            "_uid": "2d3da127-3226-4585-89a8-16806d8aea11",
+            "link": {
+              "id": "",
+              "url": "mailto:contact@kawusia.com",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "mailto:contact@kawusia.com"
+            },
+            "text": "contact@kawusia.com",
+            "style": "secondary",
+            "component": "link_button"
+          }
+        ],
+        "title": "Where we are",
+        "Header": "Where we are",
+        "header": "",
+        "address": "ul. Beautiful Street 105, City",
+        "contact": [],
+        "location": [],
+        "component": "contact_section",
+        "description": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Parking",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hard_break",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Lorem ipsum dolor sit amet consectetur. At sit quis amet vitae venenatis tincidunt dui neque id. Dictumst integer iaculis augue arcu cras egestas.",
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "phone_number": [
+          {
+            "_uid": "683ae4a1-e369-4dc9-b762-7956336e6d56",
+            "link": {
+              "id": "",
+              "url": "tel:+48 123 456 789",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "tel:+48 123 456 789"
+            },
+            "text": "+48 123 456 789",
+            "style": "secondary",
+            "component": "link_button"
+          }
+        ],
+        "opening_hours": [
+          {
+            "day": "Monday",
+            "_uid": "989df97f-9297-427a-8b22-a816d2bdbe64",
+            "hours": "Closed",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Poniedziałek",
+            "hours__i18n__pl": "Zamknięte"
+          },
+          {
+            "day": "Tuesday",
+            "_uid": "d621d2f3-de11-4d17-a5bc-53452d13fac1",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Wtorek"
+          },
+          {
+            "day": "Wednesday",
+            "_uid": "4da85406-7789-49c0-806b-b08b7fd6e5fb",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Środa"
+          },
+          {
+            "day": "Thursday",
+            "_uid": "feeb7b40-d660-4f86-8f5d-9a5d9f2b1e38",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Czwartek"
+          },
+          {
+            "day": "Friday",
+            "_uid": "41d1514b-4f48-4575-bc9f-8d804c046667",
+            "hours": "8:00 - 21:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Piątek"
+          },
+          {
+            "day": "Saturday",
+            "_uid": "cdf41a66-5443-443c-9ff2-0ca3b1f7cf8c",
+            "hours": "8:00 - 23:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Sobota"
+          },
+          {
+            "day": "Sunday",
+            "_uid": "4f0ca242-45db-4c65-8b80-d77f9ddfece5",
+            "hours": "8:00 - 14:00",
+            "component": "day_opening_hours",
+            "day__i18n__pl": "Niedziela"
+          }
+        ],
+        "title__i18n__pl": "Gdzie jesteśmy",
+        "background_color": "ternary"
+      }
+    ],
+    "title": "",
+    "component": "page",
+    "description": "Kawusia | Cafe bar"
+  },
+  "published": true,
+  "slug": "contact",
+  "path": null,
+  "full_slug": "contact",
+  "default_root": null,
+  "disble_fe_editor": false,
+  "parent": null,
+  "is_startpage": false,
+  "unpublished_changes": false,
+  "meta_data": null,
+  "imported_at": null,
+  "preview_token": {
+    "token": "2a8f4977862d862810ef7ae70529253ff3f810e1",
+    "timestamp": "1712742468"
+  },
+  "pinned": false,
+  "breadcrumbs": [],
+  "publish_at": null,
+  "expire_at": null,
+  "first_published_at": "2024-03-19T14:22:46.224Z",
+  "last_author": {
+    "id": 222811,
+    "userid": "michalrosa17@gmail.com",
+    "friendly_name": "Michał Rosa"
+  },
+  "last_author_id": 222811,
+  "user_ids": [],
+  "space_role_ids": [],
+  "translated_slugs": [],
+  "localized_paths": [
+    {
+      "path": "contact",
+      "name": null,
+      "lang": "pl",
+      "published": null
+    },
+    {
+      "path": "contact",
+      "name": null,
+      "lang": "es",
+      "published": null
+    }
+  ],
+  "position": -10,
+  "translated_stories": [],
+  "can_not_view": false,
+  "is_scheduled": null,
+  "scheduled_dates": null,
+  "ideas": [],
+  "favourite_for_user_ids": []
+}

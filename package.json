@@ -11,7 +11,8 @@
     "check": "astro check",
     "lint": "eslint 'src/**'",
     "proxy": "local-ssl-proxy --source 3010 --target 4321 --cert localhost.pem --key localhost-key.pem",
-    "generate-sb-types": "storyblok-generate-ts source=./components.277873.json target=./component-types-sb"
+    "generate-sb-types": "storyblok-generate-ts source=./components.277873.json target=./component-types-sb",
+    "prepare-space": "storyblok-space-quickstart"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -27,6 +28,7 @@
     "astro": "^4.2.8",
     "chalk": "^5.3.0",
     "storyblok-js-client": "^6.7.1",
+    "storyblok-space-quickstart": "^1.0.4",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
