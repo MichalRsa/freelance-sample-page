@@ -2,6 +2,7 @@
 
 - [Live Preview](#live-preview)
 - [Project Description](#project-description)
+- [Quickstart](#quickstart)
 - [Its key components are](#its-key-components-are)
 - [Project Structure](#project-structure)
 - [Website update](#website-update)
@@ -22,6 +23,21 @@ https://kawusia-coffe-bar.netlify.app/
 This project serves as an example of the template to build portfolio/product/blog websites. It is completely static which means it doesn't need a server and during the build time it generates all the files needed for the website to work.
 
 For a good and quick introduction to storyblok-astro.js integration, you can go through (The Storyblok Astro Ultimate Tutorial)[https://www.storyblok.com/tp/the-storyblok-astro-ultimate-tutorial].
+
+## Quickstart
+- `npm install`
+- `touch .env` => add variables described in [Environment variables](#environment-variables) section.
+- Create a new Storyblok space, choose a billing plan, find space ID, and generate a new token.
+  
+  ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/1aaeadb8-64fd-484b-acba-71ab64abc15b)
+  ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/44b9c350-5019-4175-ae75-215ebdab4e49)
+- `npm run prepare-space` => select `import data to a new space data`. Proceed with the installer.
+- Add localhost to Preview URL
+
+![Projekt bez nazwy (1)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/a000ac26-9d2d-4563-bca1-88675db1ca23)
+![Projekt bez nazwy (2)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/edb0c167-cda9-4f43-bf4c-b9004990e10b)
+
+`npm run dev`
 
 ### Its key components are:
 
