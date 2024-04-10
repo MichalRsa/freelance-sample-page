@@ -18,7 +18,7 @@
 
 
 ## Live Preview
-https://kawusia-coffe-bar.netlify.app/
+https://kawusia-coffee-bar.netlify.app/
 
 ## Project Description
 This project serves as an example of the template to build portfolio/product/blog websites. It is completely static which means it doesn't need a server and during the build time it generates all the files needed for the website to work.
