@@ -41,6 +41,9 @@ For a good and quick introduction to storyblok-astro.js integration, you can go 
 
 `npm run dev`
 
+### Internal Links issue 
+Unfortunately, internal links don't work after running the script. You will have to add them manually in each `Link` and `LinkButton` component.
+
 ## Internationalization
 The project uses field-level translations. Most of the stories' fields are already translated. To use translated fields, add language in settings:
 
