@@ -185,7 +185,7 @@ export type MultilinkStoryblok =
     };
 
 export interface LinkStoryblok {
-  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  link: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   style?: "" | "link" | "primary" | "secondary";
   text?: string;
   _uid: string;
