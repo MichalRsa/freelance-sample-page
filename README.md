@@ -29,21 +29,22 @@ For a good and quick introduction to storyblok-astro.js integration, you can go 
 - `npm install`
 - `touch .env` => add variables described in [Environment variables](#environment-variables) section.
 - Create a new Storyblok space, choose a billing plan, find space ID, and generate a new token.
-  
-  ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/1aaeadb8-64fd-484b-acba-71ab64abc15b)
-  ![image](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/44b9c350-5019-4175-ae75-215ebdab4e49)
+
+  ![quickstart](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/a0e59c5f-3584-495c-97ca-3136a97111dd)
+  ![quickstart2](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/bccf0c31-1be0-41a9-803b-34277840d8eb)
+
 - `npm run prepare-space` => select `import data to a new space`. Proceed with the installer.
 - Add localhost to Preview URL
 
-![Projekt bez nazwy (1)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/a000ac26-9d2d-4563-bca1-88675db1ca23)
-![Projekt bez nazwy (2)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/edb0c167-cda9-4f43-bf4c-b9004990e10b)
+  ![quickstart3](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/349894ff-84f3-45a5-a393-98ebc442a30e)
+  ![quickstart4](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/77f17113-3389-48f8-9203-321080dde8b9)
 
 `npm run dev`
 
 ## Internationalization
 The project uses field-level translations. Most of the stories' fields are already translated. To use translated fields, add language in settings:
 
-![Projekt bez nazwy (3)](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/fb1451e0-e6d5-4dad-b0a2-e7e9636b6495)
+![quickstart5](https://github.com/MichalRsa/freelance-sample-page/assets/73226214/074654aa-f768-4895-824c-3371757036fd)
 
 
 ### Its key components are:
