@@ -1,35 +1,19 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
+import type { LinkStoryblok } from "component-types-sb";
+import { getLinkUrl } from "../utils/getLinkUrl";
 
 export interface Props {
-  blok: {
-    link: {
-      url?: string;
-      anchor?: string;
-      cached_url: string;
-      story: {
-        full_slug: string;
-      };
-    };
-
-    text: string;
-    style: "link" | "primary" | "secondary";
-    fontSize?: string;
-    color?: "white" | "black";
-    font?: "lora" | "rubik";
-  };
-
+  blok: LinkStoryblok;
+  color?: "white" | "black";
+  fontSize?: string;
+  font?: "lora" | "rubik";
   language: string;
 }
 
-const { blok } = Astro.props;
+const { blok, color, fontSize, font } = Astro.props;
 
-const isExternal = !!blok.link.url;
-
-const anchor = !!blok.link.anchor ? `#${blok.link.anchor}` : "";
-const url = isExternal
-  ? blok.link.url
-  : `/${blok.link.story.full_slug}${anchor}`;
+const url = getLinkUrl(blok.link);
 
 const styles = {
   color: {
@@ -49,9 +33,9 @@ const styles = {
   class:list={[
     "relative capitalize text-secondary-100 duration-[1500ms] after:transition-all max-md:text-md",
     "after:absolute after:bottom-0 after:left-0 after:block after:h-[1px] after:w-full after:-translate-x-4 after:-translate-y-4 after:opacity-0 hover:after:translate-x-0 hover:after:translate-y-0 hover:after:opacity-100 md:after:h-[3px]",
-    styles.color[blok.color || "white"],
-    styles.font[blok.font || "rubik"],
-    blok.fontSize,
+    styles.color[color || "white"],
+    styles.font[font || "rubik"],
+    fontSize,
   ]}
 >
   {blok.text}

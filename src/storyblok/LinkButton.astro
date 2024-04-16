@@ -1,6 +1,7 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import type { LinkButtonStoryblok } from "../../component-types-sb";
+import { getLinkUrl } from "../utils/getLinkUrl";
 
 export interface Props {
   blok: LinkButtonStoryblok;
@@ -9,12 +10,7 @@ export interface Props {
 
 const { blok } = Astro.props;
 
-const isExternal = !!blok.link.url;
-
-const anchor = !!blok.link.anchor ? `#${blok.link.anchor}` : "";
-const url = isExternal
-  ? blok.link.url
-  : `/${blok.link.story.full_slug}${anchor}`;
+const url = getLinkUrl(blok.link);
 
 const styles = {
   font: {
